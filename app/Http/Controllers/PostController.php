@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::with('assets')->get();
         return view('admin.post.index', [
             'posts' => $posts
         ]);
@@ -75,7 +75,9 @@ class PostController extends Controller
         $request->validated();
         DB::beginTransaction();
         try {
-            // update
+            $post->update($request->only([
+                'title', 'description', 'status', 'visibility', 'revisions'
+            ]));
             DB::commit();
         } catch (\Throwable $th) {
             DB::rollback();

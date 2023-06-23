@@ -13,29 +13,38 @@ class PostTest extends TestCase
 
     //PAGE RETURN TESTS
 
-    public function test_post_index_page_is_working(): void
+    public function test_post_index_page_is_working_and_data_is_passed_correctly(): void
     {
+        $post = Post::factory()->create();
+
         $response = $this->get('/admin/post');
         $response->assertStatus(200);
 
-        // $post = Post::factory()->create();
-        // $response->assertViewHas('posts', function ($collection) use ($post) {
-        //     return $collection->contains($post);
-        // });
+        $response->assertViewHas('posts', function ($collection) use ($post) {
+            return $collection->contains($post);
+        });
     }
 
-    public function test_post_show_route_is_successful(): void
+    public function test_post_show_route_is_successful_and_data_is_passed_correctly(): void
     {
         $post = Post::factory()->create();
         $response = $this->get("/admin/post/$post->id");
+
         $response->assertStatus(200);
+        $response->assertViewHas('post', function ($collection) use ($post) {
+            return $collection->id == $post->id;
+        });
     }
 
-    public function test_post_edit_route_is_successful(): void
+    public function test_post_edit_route_is_successful_and_data_is_passed_correctly(): void
     {
         $post = Post::factory()->create();
         $response = $this->get("/admin/post/$post->id/edit");
+
         $response->assertStatus(200);
+        $response->assertViewHas('post', function ($collection) use ($post) {
+            return $collection->id == $post->id;
+        });
     }
 
     // CRUD ROUTES TESTS
@@ -74,6 +83,11 @@ class PostTest extends TestCase
         $response = $this->put("/admin/post/$post->id", $update_data);
 
         $response->assertStatus(200);
+
+        $updated_post = Post::first();
+
+        //check if data has been updated
+        $this->assertTrue($updated_post->title == $update_data['title']);
     }
 
     public function test_post_delete_is_successful(): void
@@ -82,5 +96,7 @@ class PostTest extends TestCase
         $response = $this->delete("/admin/post/$post->id");
 
         $response->assertStatus(200);
+        //check if data has been deleted from database
+        $this->assertNull(Post::find($post->id));
     }
 }
