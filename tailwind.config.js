@@ -22,7 +22,7 @@ export default {
                 'caper': '#AABA82',
             },
             dropShadow:{
-                'coriander': '6px 6px 0 rgb(170, 186, 130)',
+                'caper': '6px 6px 0 rgb(170, 186, 130)',
             },
         },
     },

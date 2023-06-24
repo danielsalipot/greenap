@@ -22,6 +22,8 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
+
+
 Route::prefix('admin')->group(
     function () {
         Route::resource('post', PostController::class);
