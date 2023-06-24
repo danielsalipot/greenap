@@ -10,6 +10,6 @@
         <h1 class="text-4xl text-caper font-extrabold">
             404 Page Not Found
         </h1>
-        <a href="/home" class="block hover:underline text-muesli font-bold underline-offset-8 decoration-2 py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:hover:text-caper  md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Go Home</a>
+        <a href="/" class="block hover:underline text-muesli font-bold underline-offset-8 decoration-2 py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:hover:text-caper  md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Go Home</a>
     </div>
 @endsection

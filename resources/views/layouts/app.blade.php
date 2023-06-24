@@ -11,7 +11,7 @@
         <div class="z-40">
             @include('inc.navbar')
         </div>
-        <div class=" mt-36 2xl:mx-36 xl:mx-12 lg:mx-12 md:mx-8 sm:mx-8 min-[390px]:mx-8">
+        <div class="container mx-auto mt-36">
             @yield('content')
         </div>
         @include('inc.footer')

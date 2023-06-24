@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container mx-auto">
+
         <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 ">
             <div class="w-full block">
                 @include('inc.searchbar')
@@ -131,8 +131,5 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
 @endsection
 

@@ -14,15 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('welcome');
+
+
+Route::group(['prefix' => '/'], function () {
+    Route::view('/', 'home')->name('home');
+    Route::view('post', 'post')->name('post');
+    Route::view('about', 'about')->name('about');
+    Route::view('contact', 'contact')->name('contact');
 });
-
-Route::get('/', function () {
-    return redirect('/home');
-});
-
-
 
 Route::prefix('admin')->group(
     function () {
