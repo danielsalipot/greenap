@@ -7,7 +7,7 @@
                 <div class="">
                     <img src="/assets/images/img-1.jpg" class="rounded-[20px]">
                 </div>
-                <p class="font-medium mt-3 text-coriander text-sm">
+                <p class="font-normal mt-3 text-caper font-hind  text-sm">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
                 </p>
             </div>
@@ -15,10 +15,10 @@
         <div class="w-full items-center flex">
             <div class="m-8">
                 <h1 class="text-6xl text-muesli font-extrabold">Title Here</h1>
-                <p class="font-medium mt-3 text-coriander text-sm">
+                <p class="font-normal mt-3 text-coriander text-md font-hind">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
                 </p>
-                <p class="font-medium mt-3 mb-3 text-coriander text-sm">
+                <p class="font-normal mt-3 mb-3 text-coriander text-md font-hind">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
                 </p>
                 <label class="text-sm text-sisal-darker">{{\Carbon\Carbon::now()->toDayDateTimeString()}}</label>
@@ -31,7 +31,7 @@
                 <div class="">
                     <img src="/assets/images/img-2.jpg" class="rounded-[20px]">
                 </div>
-                <p class="font-medium mt-3 text-coriander text-sm text-right">
+                <p class="font-normal font-hind mt-3 text-coriander text-sm text-right">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
                 </p>
                 <div class="flex justify-end mt-16">
@@ -47,7 +47,7 @@
             <div class="border flex-grow my-auto border-muesli border"></div>
         </div>
         <div class="grid p-8 min-[320px]:grid-cols-1 lg:grid-cols-2 items-center justify-items-center">
-            <p class="font-medium mt-3 text-coriander text-md min-[320px]:m-8 ">
+            <p class="font-normal font-hind mt-3 text-caper text-md min-[320px]:m-8 ">
                 Green Architecture Advocacy Philippines (Green AP) is a civic non-profit organization that is concerned about the environment
                 and takes action by promoting sustainable development of the built environment.
                 <br><br>
@@ -93,8 +93,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="m-8 py-8">
         <div class="flex content-stretch min-[320px]:m-16 md:my-16 text-right">
             <div class="border flex-grow my-auto border-muesli border"></div>
@@ -122,7 +120,6 @@
                         <li class="text-muesli text-xl font-bold">Ar. Jose F. Ignacio, uap </li>
                         <li class="text-muesli text-xl font-bold">Ar. Mary Ravelyn Javier-Busmente, uap </li>
                         <li class="text-muesli text-xl font-bold">Arch. Robert M. Mirafuente, uap </li>
-                        <li class="text-muesli text-xl font-bold">Ar. Michael T. Peña, fuap </li>
                         <li class="text-muesli text-xl font-bold">Ar. Michael T. Peña, fuap </li>
                         <li class="text-coriander"><p class="text-muesli text-xl font-bold">Ar. Edgar Reformado, fuap </p> Past Chairman</li>
                         <li class="text-coriander"><p class="text-muesli text-xl font-bold">Ar. Raymond L. Sih, uap </p> LEED-APMr </li>
