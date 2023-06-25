@@ -18,6 +18,7 @@ return new class extends Migration
             $table->longText('description');
             $table->boolean('status')->default(false);
             $table->boolean('visibility')->default(false);
+            $table->boolean('featured')->default(false);
             $table->integer('revisions')->default(0);
 
             $table->timestamp('created_at')->useCurrent();
