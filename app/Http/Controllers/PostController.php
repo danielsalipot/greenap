@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\FileUploadHelper;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Models\PostAsset;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 
@@ -42,10 +44,7 @@ class PostController extends Controller
             $post = Post::create($request->only('user_id', 'title', 'description'));
             if ($request->hasFile('images')) {
                 foreach ($request->file('images') as $image) {
-                    $filename = uniqid() . '.' . $image->getClientOriginalExtension();
-                    $image->storeAs('public/posts/post_' . $post->id, $filename);
-                    $filePath = 'storage/posts/post_' . $post->id . "/" . $filename;
-
+                    $filePath = (new FileUploadHelper)->uploadImageToStorage($image, "/posts/post_$post->id");
                     PostAsset::create([
                         'post_id' => $post->id,
                         'link' => $filePath
@@ -106,10 +105,7 @@ class PostController extends Controller
                 }
 
                 foreach ($request->file('images') as $image) {
-                    $filename = uniqid() . '.' . $image->getClientOriginalExtension();
-                    $image->storeAs('public/posts/post_' . $post->id, $filename);
-                    $filePath = 'storage/posts/post_' . $post->id . "/" . $filename;
-
+                    $filePath = (new FileUploadHelper)->uploadImageToStorage($image, "/posts/post_$post->id");
                     PostAsset::create([
                         'post_id' => $post->id,
                         'link' => $filePath
@@ -132,7 +128,17 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        $post->delete();
-        return redirect('/admin/post');
+        DB::beginTransaction();
+        try {
+            File::deleteDirectory("storage/posts/post_$post->id");
+            $post->delete();
+            DB::commit();
+
+            return redirect('/admin/post');
+        } catch (\Throwable $th) {
+            DB::rollback();
+
+            throw $th;
+        }
     }
 }

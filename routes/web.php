@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SponsorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +25,6 @@ Route::group(['prefix' => '/'], function () {
 Route::prefix('admin')->group(
     function () {
         Route::resource('post', PostController::class);
+        Route::resource('sponsor', SponsorController::class);
     }
 );
