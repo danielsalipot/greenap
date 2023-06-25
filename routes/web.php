@@ -21,6 +21,10 @@ Route::group(['prefix' => '/'], function () {
     Route::view('/', 'home')->name('home');
     Route::view('post', 'post')->name('post');
     Route::view('about', 'about')->name('about');
+
+    Route::group(['prefix' => '/post'], function(){
+        Route::view('show', 'show')->name('show');
+    });
     Route::view('contact', 'contact')->name('contact');
 });
 

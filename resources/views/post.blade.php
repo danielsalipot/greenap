@@ -13,7 +13,7 @@
             <div class="relative overflow-hidden w-auto rounded-[20px] h-full p-16">
                 <div class="hidden p-16 duration-700 ease-in-out" data-carousel-item>
                     <div class="grid min-[320px]:grid-cols-1 lg:grid-cols-2 lg:gap-8 min-[320px]:gap-y-8 items-center">
-                        <img src="/assets/images/img-2.jpg" class="lg:w-full min-[320px]:w-full">
+                        <img src="/assets/images/img-2.jpg" class="lg:w-full min-[320px]:w-full rounded-[20px]">
                         <div class="">
                             <label class="text-2xs text-caper font-semibold">Category</label>
                             <h1 class="lg:text-5xl min-[320px]:text-4xl font-extrabold text-muesli">Title Here</h1>
@@ -77,7 +77,7 @@
             </button>
         </div>
     </div>
-    <div class="m-8">
+    <div class="">
         <div class="inline-flex items-center justify-center w-full">
             <hr class="w-full my-16 border-2 border-muesli ">
             <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
@@ -205,6 +205,7 @@
         .swiper-navBtn {
             display: none;
         }
-    }</style>
+    }
+</style>
 
 @endsection
