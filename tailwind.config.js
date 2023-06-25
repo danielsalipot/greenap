@@ -23,6 +23,7 @@ module.exports = {
             },
             dropShadow:{
                 'caper': '6px 6px 0 rgb(170, 186, 130)',
+                'caper-thin': '3px 2px 0 rgb(170, 186, 130)',
             },
         },
     },
