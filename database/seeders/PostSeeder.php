@@ -24,7 +24,7 @@ class PostSeeder extends Seeder
             for ($i = 0; $i < $limit; $i++) {
                 $assets_batch[] = [
                     'post_id' => $post->id,
-                    'asset_url' => 'asdasd'
+                    'link' => 'samples/post/image_' . rand(1, 3) . '.jpg'
                 ];
             }
         }
