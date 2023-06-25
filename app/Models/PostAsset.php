@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class PostAsset extends Model
 {
     use HasFactory;
-    protected $fillable = ['post_id', 'asset_url'];
+    protected $fillable = ['post_id', 'link'];
 
     public function post()
     {

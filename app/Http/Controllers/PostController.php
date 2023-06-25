@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use App\Models\PostAsset;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
 
 class PostController extends Controller
 {
@@ -15,7 +18,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::with('assets')->get();
-        return view('admin.post.index', [
+        return view('post', [
             'posts' => $posts
         ]);
     }
@@ -36,14 +39,25 @@ class PostController extends Controller
         $request->validated();
         DB::beginTransaction();
         try {
-            Post::create($request->only('user_id', 'title', 'description'));
-            DB::commit();
+            $post = Post::create($request->only('user_id', 'title', 'description'));
+            if ($request->hasFile('images')) {
+                foreach ($request->file('images') as $image) {
+                    $filename = uniqid() . '.' . $image->getClientOriginalExtension();
+                    $image->storeAs('public/posts/post_' . $post->id, $filename);
+                    $filePath = 'storage/posts/post_' . $post->id . "/" . $filename;
 
+                    PostAsset::create([
+                        'post_id' => $post->id,
+                        'link' => $filePath
+                    ]);
+                }
+            }
+
+            DB::commit();
             return redirect('/admin/post');
         } catch (\Throwable $th) {
             DB::rollback();
-
-            return redirect()->back();
+            return back();
         }
     }
 
@@ -75,12 +89,41 @@ class PostController extends Controller
         $request->validated();
         DB::beginTransaction();
         try {
-            $post->update($request->only([
-                'title', 'description', 'status', 'visibility', 'revisions'
-            ]));
+            $post->update([
+                'title' => $request->title,
+                'description' => $request->description,
+                'status' => $request->status ?? 0,
+                'visibility' => $request->visibility ?? 0,
+                'revisions' => $post->revisions + 1,
+            ]);
+
+            if ($request->hasFile('images')) {
+                foreach ($post->assets as $key => $asset) {
+                    if (!Str::contains($asset->link, 'samples/post')) {
+                        unlink($asset->link);
+                    }
+                    PostAsset::find($asset->id)->delete();
+                }
+
+                foreach ($request->file('images') as $image) {
+                    $filename = uniqid() . '.' . $image->getClientOriginalExtension();
+                    $image->storeAs('public/posts/post_' . $post->id, $filename);
+                    $filePath = 'storage/posts/post_' . $post->id . "/" . $filename;
+
+                    PostAsset::create([
+                        'post_id' => $post->id,
+                        'link' => $filePath
+                    ]);
+                }
+            }
+
             DB::commit();
+            return back();
         } catch (\Throwable $th) {
+            dd($th);
+
             DB::rollback();
+            return back();
         }
     }
 
@@ -90,5 +133,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
+        return redirect('/admin/post');
     }
 }

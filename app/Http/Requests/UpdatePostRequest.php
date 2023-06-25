@@ -23,10 +23,10 @@ class UpdatePostRequest extends FormRequest
     {
         return [
             'user_id' => ['nullable', 'integer'],
-            'title' => ['nullable'],
-            'description' => ['nullable'],
-            'status' => ['nullable', 'boolean'],
-            'visibility' => ['nullable', 'boolean'],
+            'title' => ['required'],
+            'description' => ['required'],
+            'status' => ['nullable'],
+            'visibility' => ['nullable'],
             'revision' => ['nullable', 'integer'],
         ];
     }

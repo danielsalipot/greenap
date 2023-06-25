@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('post_assets', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('post_id');
-            $table->string('asset_url');
+            $table->string('link');
 
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
