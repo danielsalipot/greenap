@@ -20,7 +20,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::with('assets')->get();
-        return view('admin.post.index', [
+        return view('post', [
             'posts' => $posts
         ]);
     }
