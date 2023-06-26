@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->longText('description');
             $table->string('tier');
-            $table->string('logo');
-            $table->timestamps();
+            $table->string('logo')->nullable();
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

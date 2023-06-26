@@ -40,9 +40,9 @@ class SponsorController extends Controller
         $request->validated();
         DB::beginTransaction();
         try {
-            $filePath = (new FileUploadHelper)->uploadImageToStorage($request->file('logo'), "/sponsors/$request->name");
-            $data = array_merge($request->only('name', 'description', 'tier'), ['logo' => $filePath]);
-            Sponsor::create($data);
+            $sponsor = Sponsor::create($request->only('name', 'description', 'tier'));
+            $filePath = (new FileUploadHelper)->uploadImageToStorage($request->file('logo'), "/sponsors/sponsor_$sponsor->id");
+            $sponsor->update(['logo' => $filePath]);
             DB::commit();
 
             return redirect('/admin/sponsor');
@@ -85,7 +85,7 @@ class SponsorController extends Controller
                     unlink($sponsor->logo);
                 }
 
-                $filePath = (new FileUploadHelper)->uploadImageToStorage($request->file('logo'), "/sponsors/$request->name");
+                $filePath = (new FileUploadHelper)->uploadImageToStorage($request->file('logo'), "/sponsors/sponsor_$sponsor->id");
                 $sponsor->update(['logo' => $filePath]);
             }
             $sponsor->update($request->only('name', 'description', 'tier'));

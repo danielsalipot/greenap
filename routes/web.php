@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SponsorController;
 use Illuminate\Support\Facades\Route;
@@ -26,5 +27,6 @@ Route::prefix('admin')->group(
     function () {
         Route::resource('post', PostController::class);
         Route::resource('sponsor', SponsorController::class);
+        Route::resource('message', MessageController::class);
     }
 );
