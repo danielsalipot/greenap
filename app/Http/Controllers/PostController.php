@@ -40,6 +40,8 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
+
+        return $request;
         $request->validated();
         DB::beginTransaction();
         try {
@@ -59,6 +61,8 @@ class PostController extends Controller
             DB::rollback();
             return back();
         }
+
+
     }
 
     /**

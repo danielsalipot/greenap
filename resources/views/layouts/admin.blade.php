@@ -48,10 +48,10 @@
                         </button>
                         <ul id="logo-drop" class="hidden py-2 space-y-2 px-10">
                             <li>
-                                <a href="/admin/post" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">List</a>
+                                <a href="/admin/sponsor" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">List</a>
                             </li>
                             <li>
-                                <a href="/admin/post/create" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Create</a>
+                                <a href="/admin/sponsor/create" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Create</a>
                             </li>
                         </ul>
                     </ul>

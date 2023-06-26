@@ -104,7 +104,7 @@
     </div>
     <div class="m-8 py-8">
         <div class="flex content-stretch min-[320px]:m-16 md:my-16 text-right">
-            <div class="border flex-grow my-auto border-muesli border min-[320px]:hidden""></div>
+            <div class="border flex-grow my-auto border-muesli border min-[320px]:hidden"></div>
             <h1 class="lg:text-6xl min-[320px]:text-4xl ml-8 font-extrabold text-muesli">Company Overview</h1>
         </div>
         <div class="grid grid-rows-1">
@@ -146,7 +146,7 @@
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                     @foreach($sponsors as $sponsor)
-                        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="{{$sponsor->logo}}" alt="Transistor" width="100" height="100">
+                        <img class="col-span-2 max-h-30 w-full object-contain lg:col-span-1 grayscale" src="{{$sponsor->logo}}" width="200" height="200">
                     @endforeach
                 </div>
             </div>
