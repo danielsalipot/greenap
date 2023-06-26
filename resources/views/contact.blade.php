@@ -13,7 +13,7 @@
                         <h1 class="lg:text-6xl min-[320px]:text-4xl ml-8 font-bold text-black">Contact Us</h1>
                     </div>
                     <div class="grid pt-8 min-[320px]:grid-cols-1 md:grid-cols-2 items-start">
-                        <div class="h-[80%] max-w-full mx-4">                     
+                        <div class="h-[80%] max-w-full mx-4">
                             <img src="/assets/images/img-3.jpg" class="h-full w-full">
                         </div>
                         <div class="border-2 border-black max-w-full mx-4 px-8 pt-12 pb-8 h-[80%] overflow-y-auto">

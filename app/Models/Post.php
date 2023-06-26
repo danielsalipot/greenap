@@ -15,4 +15,8 @@ class Post extends Model
     {
         return $this->hasMany(PostAsset::class);
     }
+
+    public function users(){
+        return $this->belongsTo(User::class);
+    }
 }

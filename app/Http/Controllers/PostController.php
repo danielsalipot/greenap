@@ -10,6 +10,7 @@ use App\Models\PostAsset;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use App\Models\User;
 
 
 class PostController extends Controller
@@ -20,9 +21,10 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::with('assets')->get();
-        return view('post', [
-            'posts' => $posts
-        ]);
+        return view('admin.post.index',
+            [
+                'posts' => $posts,
+            ]);
     }
 
     /**
@@ -51,7 +53,6 @@ class PostController extends Controller
                     ]);
                 }
             }
-
             DB::commit();
             return redirect('/admin/post');
         } catch (\Throwable $th) {
