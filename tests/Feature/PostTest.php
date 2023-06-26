@@ -8,6 +8,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
 use Tests\TestCase;
+use Illuminate\Support\Facades\File;
 
 class PostTest extends TestCase
 {
@@ -78,6 +79,8 @@ class PostTest extends TestCase
         $response = $this->post('/admin/post', $post);
         $response->assertRedirect();
         $this->assertDatabaseMissing('posts', $post);
+
+        File::deleteDirectory("storage/posts/post_1");
     }
 
     public function test_post_update_with_proper_data_is_successful(): void
@@ -96,6 +99,8 @@ class PostTest extends TestCase
         //check if data has been updated
         $updated_post = Post::find($post->id);
         $this->assertTrue($updated_post->title == $update_data['title']);
+
+        File::deleteDirectory("storage/posts/post_1");
     }
 
     public function test_post_delete_is_successful(): void
