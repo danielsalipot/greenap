@@ -40,14 +40,14 @@
             </div>
 
             <label class="block mb-2 text-black font-bold mt-3" for="multiple_files">Upload Images</label>
-            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" name="images[]" multiple  accept="images/*">
+            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" name="images[]" multiple  accept="images/*" onchange="loadFile(event)">
             <button type="submit" class="mt-3 bg-muesli rounded-none  px-4 py-2 text-white hover:drop-shadow-caper w-full">Save</button>
         </div>
     </div>
 </div>
 </form> 
 
-{{-- <script>
+<script>
     var loadFile = function(event) {
         var carousel_image = '';
         for (let i = 0; i < event.target.files.length; i++) {
@@ -61,7 +61,7 @@
         
         console.log(carousel_image)
     };
-</script> --}}
+</script>
 
 
 @endsection
