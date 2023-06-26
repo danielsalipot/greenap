@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer(['inc.more-posts-carousel','home'], function ($view){
-            $posts = Post::with('assets','users')->get();
+            $posts = Post::with('users','assets')->get();
             $sponsors = Sponsor::all();
                 $view->with('posts',$posts);
                 $view->with('sponsors',$sponsors);
