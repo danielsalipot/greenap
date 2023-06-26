@@ -104,7 +104,7 @@
     </div>
     <div class="m-8 py-8">
         <div class="flex content-stretch min-[320px]:m-16 md:my-16 text-right">
-            <div class="border flex-grow my-auto border-muesli border min-[320px]:hidden""></div>
+            <div class="border flex-grow my-auto border-muesli border min-[320px]:invisible lg:visible"></div>
             <h1 class="lg:text-6xl min-[320px]:text-4xl ml-8 font-extrabold text-muesli">Company Overview</h1>
         </div>
         <div class="grid grid-rows-1">
@@ -139,18 +139,39 @@
             </div>
         </div>
         <div class="flex content-stretch min-[320px]:m-16 md:my-16 text-right">
-            <h1 class="lg:text-4xl min-[320px]:text-4xl mr-8 font-extrabold text-muesli">Industry Partners & Corporate Members</h1>
-            <div class="border flex-grow my-auto border-muesli border min-[320px]:hidden"></div>
+            <h1 class="lg:text-4xl min-[320px]:text-4xl mr-8 font-extrabold text-muesli">Corporate Members</h1>
+            <div class="border flex-grow my-auto border-muesli border min-[320px]:invisible lg:visible"></div>
         </div>
         <div class="bg-white py-12 sm:py-8">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                    @foreach($sponsors as $sponsor)
-                        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="{{$sponsor->logo}}" alt="Transistor" width="100" height="100">
+            <div class="max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center min-[320px]:grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                    @foreach($sponsor_member as $member)
+                        <div class="text-center bg-black-white/20 lg:p-12 min-[320px]:p-8">
+                            <img class="col-span-2 max-h-12 w-full object-contain grayscale lg:col-span-1" src="{{$member->logo}}" alt="Transistor" width="100" height="100">
+                            <div class="text-caper font-bold text-xl line-clamp-1">{{$member->name}}</div>
+                            <p class="text-sm font-normal text-muesli line-clamp-2">{{$member->description}}</p>
+                        </div>
                     @endforeach
                 </div>
             </div>
         </div>
+    <div class="flex content-stretch min-[320px]:m-16 md:my-16 text-right">
+        <div class="border flex-grow my-auto border-muesli border min-[320px]:invisible lg:visible"></div>
+        <h1 class="lg:text-4xl min-[320px]:text-4xl ml-8 font-extrabold text-muesli">Industry Partners</h1>
+    </div>
+    <div class="bg-white py-12 sm:py-8">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center min-[320px]:grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                @foreach($sponsor_partner as $partner)
+                    <div class="text-center bg-black-white/20 lg:p-12 min-[320px]:p-8">
+                        <img class="col-span-2 max-h-12 w-full object-contain grayscale lg:col-span-1" src="{{$partner->logo}}" alt="Transistor" width="100" height="100">
+                        <div class="text-caper font-bold text-xl line-clamp-1">{{$partner->name}}</div>
+                        <p class="text-sm font-normal text-muesli line-clamp-2">{{$partner->description}}</p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
     </div>
 @endsection
 

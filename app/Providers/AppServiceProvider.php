@@ -28,10 +28,11 @@ class AppServiceProvider extends ServiceProvider
                         'show'],
             function ($view){
                 $posts = Post::with('users','assets')->get();
-                $sponsors = Sponsor::all();
-
+                $sponsor_member = Sponsor::where('tier','member')->get();
+                $sponsor_partner = Sponsor::where('tier','partner')->get();
                 $view->with('posts',$posts)
-                    ->with('sponsors',$sponsors);
+                    ->with('sponsor_member', $sponsor_member)
+                    ->with('sponsor_partner', $sponsor_partner);
         });
     }
 }
