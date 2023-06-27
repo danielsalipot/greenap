@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 use App\Models\User;
 
 
+
 class PostController extends Controller
 {
     /**
@@ -40,8 +41,7 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-
-        return $request;
+        return $request->all();
         $request->validated();
         DB::beginTransaction();
         try {

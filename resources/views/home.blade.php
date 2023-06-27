@@ -14,8 +14,14 @@
         </div>
         <div class="w-full items-center flex">
             <div class="m-8 min-[320px]:text-center lg:text-left">
-                <span class="bg-caper text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">Featured</span>
-                <h1 class="text-6xl text-muesli font-extrabold">Title Here</h1>
+                <div dir="rtl">
+                    <div class="relative">
+                        <span class="bg-caper absolute start-0 top-1 text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">Featured</span>
+
+                        <h1 class="text-6xl text-muesli font-extrabold">Title Here</h1>
+                    </div>
+                </div>
+
                 <p class="font-normal mt-3 text-coriander text-lg font-hind">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
                 </p>
@@ -173,5 +179,7 @@
         </div>
     </div>
     </div>
+
+
 @endsection
 
