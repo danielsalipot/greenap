@@ -60,7 +60,7 @@
                         {{Carbon\Carbon::parse($post->created_at)->diffForHumans()}}
                     </td>
                     <td class="px-6 py-4">
-                        <a href="/admin/post/{{$post->id}}/edit" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                        <a href="/admin/post/{{$post->id}}/edit" class="bg-muesli px-3 py-1 text-white hover:drop-shadow-caper w-full font-medium">Edit</a>
                     </td>
                 </tr>
                 @endforeach
