@@ -6,12 +6,15 @@
 @csrf
 <input type="hidden" name="user_id" value="1">
 <div class="flex m-3 bg-sisal rounded-[10px]">
-    <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 w-full p-8 gap-8">
+    <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 w-full p-8 gap-y-4 gap-x-8">
+        <div class="w-full lg:col-span-2">
+            <h1 class="text-2xl font-bold">New Post</h1>
+        </div>
         <div class="w-full">
             <label for="title" class="block mb-2 text-black font-bold">Title</label>
             <input type="text" id="title" name="title" class="w-full text-black rounded-[5px] border border-none">
-            <label for="body" class="block mb-2 text-black font-bold">Body</label>
-            <textarea type="text" id="body" name="description" rows="30" class="w-full text-black rounded-[5px] border border-none"></textarea>
+            <label for="body" class="block my-2 text-black font-bold">Body</label>
+            <textarea type="text" id="body" name="description" rows="20" class="w-full text-black rounded-[5px] border border-none"></textarea>
         </div>
 
         <div class="items-center">
@@ -21,12 +24,12 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <label class="block mb-2 text-black font-bold mt-3" for="multiple_files">Upload Images</label>
+            <label class="block mb-2 text-black font-bold mt-2" for="multiple_files">Upload Images</label>
             <div class="flex items-center gap-x-4">
                 <input class="block w-full text-sm text-gray-900 border cursor-pointer rounded-lg bg-black-white dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" name="images[]" multiple accept="images/*">
                 <button type="submit" onclick="reset()" class=" bg-muesli rounded-none  px-4 py-2 text-white text-sm w-1/3 hover:drop-shadow-caper">Reset Images</button>
             </div>
-            <button type="submit" class="mt-3 bg-muesli rounded-none  px-4 py-2 text-white hover:drop-shadow-caper w-full">Save</button>
+            <button type="submit" class="mt-3 bg-muesli rounded-none  px-4 py-2 text-white hover:drop-shadow-caper w-full">Submit</button>
         </div>
     </div>
 </div>

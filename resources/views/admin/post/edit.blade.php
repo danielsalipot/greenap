@@ -18,8 +18,8 @@
             </div>
             <div class="w-full">
                 <label for="title" class="block mb-2 text-black font-bold">Title</label>
-                <input type="text" name="title" class="w-full text-black rounded-[5px] border border-none mb-1" value="{{ $post->title }}"><br>
-                <label for="body" class="block mb-2 text-black font-bold">Body</label>
+                <input type="text" name="title" class="w-full text-black rounded-[5px] border border-none" value="{{ $post->title }}"><br>
+                <label for="body" class="block my-2 text-black font-bold">Body</label>
                 <textarea name="description" rows="30" class="w-full text-black rounded-[5px] border border-none">{{ $post->description }}</textarea><br>
             </div>
 
