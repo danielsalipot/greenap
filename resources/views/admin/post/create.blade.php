@@ -55,7 +55,7 @@
                 `
                 <div class="card swiper-slide">
                     <div class="relative">
-                        <img class="object-cover" src="${URL.createObjectURL(image)}" alt="" />
+                        <img class="object-cover h-[500px] w-full rounded-lg" src="${URL.createObjectURL(image)}" alt="" />
                     </div>
                 </div>
                 `
