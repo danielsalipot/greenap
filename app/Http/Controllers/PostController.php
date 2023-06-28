@@ -21,9 +21,15 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('assets')->get();
+
+        $posts = Post::with('assets')
+        ->where('status',0)
+        ->orderBy('created_at', 'desc')
+        ->paginate(20);
+        $stat = 0;
         return view('admin.post.index',
-            [
+            [   
+                'stat' => $stat,
                 'posts' => $posts,
             ]);
     }
@@ -41,7 +47,6 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        return $request->all();
         $request->validated();
         DB::beginTransaction();
         try {
@@ -145,5 +150,19 @@ class PostController extends Controller
 
             throw $th;
         }
+    }
+
+    public function posted(){
+        
+        $posts = Post::with('assets')
+        ->where('status',1)
+        ->orderBy('created_at', 'desc')
+        ->paginate(20);
+        $stat = 1;
+        return view('admin.post.index',
+            [
+                'stat' => $stat,
+                'posts' => $posts,
+            ]);
     }
 }

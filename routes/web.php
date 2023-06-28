@@ -32,6 +32,7 @@ Route::group(['prefix' => '/'], function () {
 Route::prefix('admin')->group(
     function () {
         Route::resource('post', PostController::class);
+        Route::get('posted', [PostController::class, 'posted']);
         Route::resource('sponsor', SponsorController::class);
         Route::resource('message', MessageController::class);
     }
