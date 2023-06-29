@@ -10,7 +10,6 @@ use App\Models\PostAsset;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use App\Models\User;
 
 
 
@@ -24,11 +23,11 @@ class PostController extends Controller
 
         $posts = Post::with('assets')
         ->where('status',0)
-        ->orderBy('created_at', 'desc')
+        ->orderBy('updated_at', 'desc')
         ->paginate(20);
         $stat = 0;
         return view('admin.post.index',
-            [   
+            [
                 'stat' => $stat,
                 'posts' => $posts,
             ]);
@@ -50,7 +49,7 @@ class PostController extends Controller
         $request->validated();
         DB::beginTransaction();
         try {
-            $post = Post::create($request->only('user_id', 'title', 'description'));
+            $post = Post::create($request->only('user_id', 'title', 'description', 'body'));
             if ($request->hasFile('images')) {
                 foreach ($request->file('images') as $image) {
                     $filePath = (new FileUploadHelper)->uploadImageToStorage($image, "/posts/post_$post->id");
@@ -73,9 +72,11 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        return view('admin.post.show', [
+        $post = Post::with('assets','users')->find($id);
+
+        return view('show', [
             'post' => $post
         ]);
     }
@@ -101,8 +102,10 @@ class PostController extends Controller
             $post->update([
                 'title' => $request->title,
                 'description' => $request->description,
+                'body'=>$request->body,
                 'status' => $request->status ?? 0,
                 'visibility' => $request->visibility ?? 0,
+                'featured' => $request->featured ?? 0,
                 'revisions' => $post->revisions + 1,
             ]);
 
@@ -153,7 +156,7 @@ class PostController extends Controller
     }
 
     public function posted(){
-        
+
         $posts = Post::with('assets')
         ->where('status',1)
         ->orderBy('created_at', 'desc')

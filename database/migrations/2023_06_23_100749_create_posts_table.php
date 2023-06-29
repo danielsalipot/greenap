@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->longText('description');
+            $table->longText('body');
             $table->boolean('status')->default(false);
             $table->boolean('visibility')->default(false);
             $table->boolean('featured')->default(false);

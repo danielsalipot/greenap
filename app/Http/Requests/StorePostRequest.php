@@ -25,6 +25,7 @@ class StorePostRequest extends FormRequest
             'user_id' => ['required', 'integer'],
             'title' => ['required'],
             'description' => ['required'],
+            'body'=>['required'],
             'status' => ['nullable', 'boolean'],
             'visibility' => ['nullable', 'boolean'],
             'revision' => ['nullable', 'integer'],

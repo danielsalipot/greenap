@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 m-2">
-        <div class="w-full block">
-            @include('inc.searchbar')
-        </div>
-    </div>
+   @include('inc.searchbar')
     <div class="m-8">
         <div class="border flex-grow my-auto border-muesli border mb-16"></div>
             <div class="bg-black-white">

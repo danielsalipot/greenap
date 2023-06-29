@@ -19,7 +19,8 @@ class PostFactory extends Factory
         return [
             'user_id' => 1,
             'title' => fake()->text(100),
-            'description' => fake()->paragraph(),
+            'description' => fake()->sentence(),
+            'body' => fake()->paragraphs(3,true),
             'status' => rand(0, 1),
             'visibility' => rand(0, 1)
         ];

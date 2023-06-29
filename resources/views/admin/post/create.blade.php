@@ -13,8 +13,11 @@
         <div class="w-full">
             <label for="title" class="block mb-2 text-black font-bold">Title</label>
             <input type="text" id="title" name="title" class="w-full text-black rounded-[5px] border border-none">
+            <label for="description" class="block my-2 text-black font-bold">Description</label>
+            <textarea type="text" id="description" name="description" rows="10" class="w-full text-black rounded-[5px] border border-none"></textarea>
             <label for="body" class="block my-2 text-black font-bold">Body</label>
-            <textarea type="text" id="body" name="description" rows="20" class="w-full text-black rounded-[5px] border border-none"></textarea>
+            <textarea name="body" id="body" rows="30" class="w-full text-black rounded-[5px] border border-none"></textarea><br>
+
         </div>
 
         <div class="items-center">

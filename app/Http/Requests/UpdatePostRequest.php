@@ -25,6 +25,7 @@ class UpdatePostRequest extends FormRequest
             'user_id' => ['nullable', 'integer'],
             'title' => ['required'],
             'description' => ['required'],
+            'body'=>['required'],
             'status' => ['nullable'],
             'visibility' => ['nullable'],
             'revision' => ['nullable', 'integer'],
