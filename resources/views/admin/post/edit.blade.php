@@ -43,7 +43,7 @@
 
                 <label class="block mb-2 text-black font-bold mt-3" for="multiple_files">Upload Images</label>
                 <div class="flex items-center gap-x-4">
-                    <input type="file" name="images[]" class="block w-full text-sm text-gray-900 border cursor-pointer rounded-lg bg-black-white dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" name="images[]" multiple accept="images/*"><br>
+                    <input type="file" name="images[]" class="block w-full text-sm text-gray-900 border cursor-pointer rounded-lg bg-black-white dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" multiple accept="images/*"><br>
                     <button type="submit" onclick="reset()" class=" bg-muesli rounded-none  px-4 py-2 text-white text-sm w-1/3 hover:drop-shadow-caper">Reset Images</button>
                 </div>
 
