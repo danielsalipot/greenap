@@ -48,7 +48,7 @@ class AppServiceProvider extends ServiceProvider
                             ->where('featured', 1)
                             ->where('status', 1)
                             ->where('visibility',1)
-                            ->orderBy('created_at', 'desc')
+                            ->orderBy('updated_at', 'desc')
                             ->get();
 
             $view->with('ftPosts',$ftPosts);

@@ -45,7 +45,8 @@
                 @foreach ($posts as $post)
                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-50">
                     <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <p class="w-[250px] whitespace-nowrap text-ellipsis overflow-hidden" id="title">{{$post->title}}</p>
+                        {{-- title with badges --}}
+                        <p class="w-[250px] whitespace-nowrap text-ellipsis overflow-hidden" id="title">{!!$post->featured ? '<span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">Featured</span>' : ''!!}{!!$post->visibility ? '<span class="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-purple-900 dark:text-purple-300">Visible</span>':''!!}{{$post->title}}</p>
                     </th>
                     <td class="px-6 py-4 overflow-hidden">
                        <p class="w-[250px] whitespace-nowrap text-ellipsis overflow-hidden">{{$post->description}}</p>

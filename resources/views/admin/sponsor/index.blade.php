@@ -34,10 +34,10 @@
                         Tier
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Created At
+                        Last Edited At
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Last Edited At
+                        Created At
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Action
@@ -46,8 +46,29 @@
             </thead>
             <tbody>
                 @foreach ($sponsors as $sponsor)
-                {{ $sponsor->name }}
-                <img src="{{ asset($sponsor->logo) }}" style="width: 50px; height:50px;">
+                <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-50">
+                    <td class="px-6 py-4">
+                        <img src="{{ asset($sponsor->logo) }}" style="width: 50px; height:50px;">    
+                    </td>
+                    <td class="px-6 py-4">
+                        <p id="name">{{$sponsor->name}}</p>
+                    </td>
+                    <td class="px-6 py-4">
+                        <p class="w-[250px] whitespace-nowrap text-ellipsis overflow-hidden"> {{$sponsor->description}}
+                        </td></p>
+                    <td class="px-6 py-4">
+                        <p>{!!($sponsor->tier=='partner')? '<span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">Industry Partner</span>' : '<span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300">Corporate Member</span>'!!}</p>
+                    </td>
+                    <td class="px-6 py-4">
+                        {{Carbon\Carbon::parse($sponsor->updated_at)->diffForHumans()}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{Carbon\Carbon::parse($sponsor->created_at)->diffForHumans()}}
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="/admin/sponsor/{{$sponsor->id}}/edit" class="bg-muesli px-3 py-1 text-white hover:drop-shadow-caper w-full font-medium">Edit</a>
+                    </td>
+                     </tr>
                 @endforeach
             </tbody>
         </table>
@@ -59,7 +80,7 @@
     function search(){
         const searchInput=document.querySelector('#search')
         const filter = searchInput.value.toLowerCase()
-        const listItems = document.querySelectorAll('#title')
+        const listItems = document.querySelectorAll('#name')
 
         listItems.forEach((item)=>{
             let text = item.textContent;
@@ -68,7 +89,7 @@
             }
             else{
                 item.parentElement.parentElement.style.display='none'
-            }
+            }   
         });
     }
 </script>

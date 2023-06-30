@@ -159,7 +159,9 @@ class PostController extends Controller
 
         $posts = Post::with('assets')
         ->where('status',1)
-        ->orderBy('created_at', 'desc')
+        ->orderBy('updated_at', 'desc')
+        ->orderBy('featured', 'desc')
+        ->orderBy('visibility','desc')
         ->paginate(20);
         $stat = 1;
         return view('admin.post.index',
