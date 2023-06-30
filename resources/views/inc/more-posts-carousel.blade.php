@@ -12,7 +12,7 @@
                 <div class="card swiper-slide">
                     <div class="max-w-sm lg:max-w-[350px] bg-white border-2 border-muesli rounded-[20px] dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
-                            <img class="rounded-t-[20px] object-cover w-full h-[200px]" src="/assets/images/img-3.jpg" alt="" />
+                            <img class="rounded-t-[20px] object-cover w-full h-[200px]" src="{{ asset($post->assets[0]->link) }}" alt="" />
                         </a>
                         <div class="p-6 space-y-4">
                             <a href="#" class="space-y-1">
