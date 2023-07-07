@@ -2,9 +2,10 @@
 
     <div class="slide-container-ft">
         <div class="swiper-wrapper">
+
             @foreach($ftPosts as $post)
                 <div class="swiper-slide">
-                    <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 ">
+                    <div class="grid {{ count($post->assets) === 1 ? ' lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1' : 'lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1' }}  ">
                         <div class="w-full block">
                             <div class="m-8">
                                 <div class="flex items-center justify-center">
@@ -40,6 +41,8 @@
                                 <button onclick="window.location.href = '/post/{{$post->id}}'" class="bg-muesli w-full justify-between flex items-center rounded-none px-4 py-2 text-white hover:drop-shadow-caper">Read More <i class="ml-3 fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
+
+                        @if( count($post->assets) !== 1)
                         <div class="w-full items-center flex">
                             <div class="m-8 ">
                                 <div class="">
@@ -50,6 +53,9 @@
                                 </p>
                             </div>
                         </div>
+                        @else
+
+                        @endif
                     </div>
                 </div>
             @endforeach
