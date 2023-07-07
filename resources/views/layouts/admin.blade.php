@@ -5,10 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         @vite(['resources/css/app.css',
                 'resources/js/app.js',
-                'resources/css/swiper-bundle.min.css',
-                'resources/js/swiper-bundle.min.js',
-                'resources/js/script.js'
+                'resources/js/script-admin.js'
             ])
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+
+
         <title>Green AP</title>
     </head>
     <body class="antialiased font-nunito">
@@ -79,6 +84,7 @@
             @yield('content')
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/273827b7bf.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/273827b7bf.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     </body>
 </html>

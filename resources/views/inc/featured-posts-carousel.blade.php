@@ -5,7 +5,7 @@
 
             @foreach($ftPosts as $post)
                 <div class="swiper-slide">
-                    <div class="grid {{ count($post->assets) === 1 ? ' lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1' : 'lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1' }}  ">
+                    <div class="grid {{ count($post->assets) === 1 ? 'lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1' : 'lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1' }}  ">
                         <div class="w-full block">
                             <div class="m-8">
                                 <div class="flex items-center justify-center">
