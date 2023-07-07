@@ -1,4 +1,8 @@
 var swiper = new Swiper(".slide-container", {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     slidesPerView: 4,
     spaceBetween: 20,
     sliderPerGroup: 4,
@@ -36,6 +40,10 @@ var swiper = new Swiper(".slide-container", {
 });
 
 var swiper = new Swiper(".slide-container-ft", {
+    autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+    },
     slidesPerView: 1,
     loop: true,
     spaceBetween: 20,

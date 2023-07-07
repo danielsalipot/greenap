@@ -8,7 +8,7 @@
                         <div class="w-full block">
                             <div class="m-8">
                                 <div class="flex items-center justify-center">
-                                    <img src="/assets/images/img-1.jpg" class="rounded-[20px]">
+                                    <img src="{{ asset($post->assets[0]->link) }}" class="rounded-[20px]">
                                 </div>
                                 <p class="font-normal mt-3 text-caper font-hind lg:text-left min-[320px]:text-center text-sm">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
@@ -43,14 +43,11 @@
                         <div class="w-full items-center flex">
                             <div class="m-8 ">
                                 <div class="">
-                                    <img src="/assets/images/img-2.jpg" class="rounded-[20px] ">
+                                    <img src="{{ asset($post->assets[1]->link) }}" class="rounded-[20px] ">
                                 </div>
                                 <p class="font-normal font-hind mt-3 text-caper text-sm text-right">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
                                 </p>
-                                <div class="flex justify-end mt-16">
-                                    <label class="text-md text-muesli font-medium">Visitors | 1</label>
-                                </div>
                             </div>
                         </div>
                     </div>

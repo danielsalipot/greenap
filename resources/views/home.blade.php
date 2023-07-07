@@ -118,17 +118,33 @@
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center min-[320px]:grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                 @foreach($sponsor_partner as $partner)
-                    <div class="text-center bg-black-white/20 lg:p-12 min-[320px]:p-8">
-                        <img class="col-span-2 max-h-12 w-full object-contain grayscale lg:col-span-1" src="{{$partner->logo}}" alt="Transistor" width="100" height="100">
-                        <div class="text-caper font-bold text-xl line-clamp-1">{{$partner->name}}</div>
-                        <p class="text-sm font-normal text-muesli line-clamp-2">{{$partner->description}}</p>
+                    <div class="text-center lg:p-12 min-[320px]:p-8">
+                        <img data-popover-target="popover-company-profile-{{$partner->id}}" class="col-span-2 max-h-16 w-full object-contain grayscale lg:col-span-1" src="{{$partner->logo}}" alt="Transistor" width="100" height="100">
+                        <div class="text-caper font-bold text-lg text-center">{{$partner->name}}</div>
+                    </div>
+                    <div data-popover id="popover-company-profile-{{$partner->id}}" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-80 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
+                        <div class="p-3">
+                            <div class="flex">
+                                <div class="mr-3 shrink-0">
+                                    <a href="#" class="block p-2 bg-gray-100 rounded-lg dark:bg-gray-700">
+                                        <img class="w-8 h-8 rounded-full" src="{{$partner->logo}}" alt="Flowbite logo">
+                                    </a>
+                                </div>
+                                <div>
+                                    <p class="mb-1 text-base font-semibold leading-none text-gray-900 dark:text-white">
+                                        <a href="#" class="font-bold text-caper">{{$partner->name}}</a>
+                                    </p>
+                                    <p class=" text-sm text-coriander">{{$partner->description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-popper-arrow></div>
                     </div>
                 @endforeach
             </div>
         </div>
     </div>
 </div>
-
 
 @endsection
 

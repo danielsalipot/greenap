@@ -7,7 +7,8 @@
     <div class="flex content-stretch min-[320px]:m-8 md:my-16">
         <div class="border flex-grow my-auto border-muesli border"></div>
             <div class="ml-8 text-right ">
-                <label class="text-2xs text-caper font-semibold">Category</label>
+                <span class="bg-caper w-auto text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">{{ $post->featured == 1 ? "Featured" :  "Category"}}</span>
+
                 <h1 class="lg:text-7xl min-[320px]:text-6xl font-extrabold text-muesli">{{$post->title}}</h1>
                 <div class="flex justify-end items-center space-x-4 ">
                     <div class="dark:text-white">
@@ -20,7 +21,6 @@
                         <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="">
                         <span class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
                     </div>
-
                 </div>
             </div>
         </div>
