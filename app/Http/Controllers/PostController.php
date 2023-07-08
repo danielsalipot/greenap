@@ -10,6 +10,7 @@ use App\Models\PostAsset;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Session;
 
 
 
@@ -60,6 +61,7 @@ class PostController extends Controller
                 }
             }
             DB::commit();
+            Session::flash('message', 'Post Successfuly Added to Drafts');
             return redirect('/admin/post');
         } catch (\Throwable $th) {
             DB::rollback();
@@ -127,6 +129,7 @@ class PostController extends Controller
             }
 
             DB::commit();
+            Session::flash('message', 'Successfully Updated');
             return back();
         } catch (\Throwable $th) {
             dd($th);
@@ -147,6 +150,7 @@ class PostController extends Controller
             $post->delete();
             DB::commit();
 
+            Session::flash('message', 'Post Deleted');
             return redirect('/admin/post');
         } catch (\Throwable $th) {
             DB::rollback();
