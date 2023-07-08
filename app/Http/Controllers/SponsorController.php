@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateSponsorRequest;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Session;
 
 
 class SponsorController extends Controller
@@ -45,6 +46,7 @@ class SponsorController extends Controller
             $sponsor->update(['logo' => $filePath]);
             DB::commit();
 
+            Session::flash('message', 'New Sponsor Added');
             return redirect('/admin/sponsor');
         } catch (\Throwable $th) {
             DB::rollback();
@@ -91,6 +93,7 @@ class SponsorController extends Controller
             $sponsor->update($request->only('name', 'description', 'tier'));
             DB::commit();
 
+            Session::flash('message', 'Sponsor Updated');
             return redirect("/admin/sponsor");
         } catch (\Throwable $th) {
             DB::rollback();
@@ -109,6 +112,7 @@ class SponsorController extends Controller
             $sponsor->delete();
             DB::commit();
 
+            Session::flash('message', 'Sponsor Deleted');
             return redirect('/admin/sponsor');
         } catch (\Throwable $th) {
             DB::rollback();
