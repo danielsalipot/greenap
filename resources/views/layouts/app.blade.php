@@ -15,17 +15,17 @@
         <title>Green AP</title>
     </head>
     <body class="antialiased font-nunito">
-    <div class="grid grid-rows-1">
-        <div class="z-40">
-            @include('inc.navbar')
+        <div class="grid grid-rows-1">
+            <div class="z-40">
+                @include('inc.navbar')
+            </div>
+            <div class="container mx-auto mt-36 ">
+                @yield('content')
+            </div>
+            @include('inc.footer')
         </div>
-        <div class="container mx-auto mt-36">
-            @yield('content')
-        </div>
-        @include('inc.footer')
-    </div>
-    <script src="https://kit.fontawesome.com/273827b7bf.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/273827b7bf.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     </body>
 </html>
 

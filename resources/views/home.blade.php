@@ -1,10 +1,58 @@
 @extends('layouts.app')
 @section('content')
-
+    <div class="marquee absolute m-0 p-0">
+        <div class="marquee-content container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
+            <div class="-m-1 flex flex-wrap md:-m-2">
+                <div class="flex w-1/2 flex-wrap">
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img
+                            alt="gallery"
+                            class="block h-full w-full rounded-lg object-cover object-center"
+                            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
+                    </div>
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img
+                            alt="gallery"
+                            class="block h-full w-full rounded-lg object-cover object-center"
+                            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
+                    </div>
+                    <div class="w-full p-1 md:p-2">
+                        <img
+                            alt="gallery"
+                            class="block h-full w-full rounded-lg object-cover object-center"
+                            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+                    </div>
+                </div>
+                <div class="flex w-1/2 flex-wrap">
+                    <div class="w-full p-1 md:p-2">
+                        <img
+                            alt="gallery"
+                            class="block h-full w-full rounded-lg object-cover object-center"
+                            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
+                    </div>
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img
+                            alt="gallery"
+                            class="block h-full w-full rounded-lg object-cover object-center"
+                            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
+                    </div>
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img
+                            alt="gallery"
+                            class="block h-full w-full rounded-lg object-cover object-center"
+                            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     @include('inc.searchbar')
-    @include('inc.featured-posts-carousel')
 
-    @include('inc.more-posts-carousel')
+
+        @include('inc.featured-posts-carousel')
+
+        @include('inc.more-posts-carousel')
+
     <div class="m-8">
         <div class="flex content-stretch min-[320px]:m-8 md:my-16 text-center">
             <h1 class="lg:text-6xl min-[320px]:text-4xl mr-8 font-extrabold text-muesli">Who We Are</h1>
@@ -19,7 +67,7 @@
                 general public.
             </p>
             <div class="">
-                <img src="/assets/images/img-2.jpg" class="rounded-[20px] ">
+                <img src="/assets/images/ga-team-2.jpg" class="rounded-[20px] ">
             </div>
         </div>
     </div>
@@ -33,7 +81,7 @@
             <div class="grid grid-rows-2">
                 <div class="grid p-8 min-[320px]:grid-cols-1 lg:grid-cols-2 lg:gap-8 items-center justify-items-center">
                     <div class="">
-                        <img src="/assets/images/img-2.jpg" class="rounded-[20px]">
+                        <img src="/assets/gifs/ga-vision.gif" class="rounded-[20px]">
                     </div>
                     <p class="font-medium mt-3 lg:text-lg text-muesli text-md min-[320px]:m-4 ">
                         The Green Architecture Advocacy Philippines encourages and promotes the global adoption of sustainable green building and
@@ -145,6 +193,64 @@
         </div>
     </div>
 </div>
-
 @endsection
+
+<style>
+    .marquee {
+        width: 100%;
+        height: 80px;
+        margin: 0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .marquee-content {
+        display: inline-block;
+        margin-top: 5px;
+        animation: marquee 10s linear infinite;
+    }
+    .item-collection-1 {
+        position: relative;
+        left: 0%;
+        animation: swap 10s linear infinite;
+    }
+    @keyframes swap {
+        0%, 50% {
+            left: 0%;
+        }
+        50.01%,
+        100% {
+            left: 100%;
+        }
+    }
+    .marquee-content:hover {
+        animation-play-state: paused
+    }
+    .item1 {
+        display: inline-block;
+        height: auto;
+        width: 500px;
+        background: cyan;
+        vertical-align: top;
+        margin-left: 15px;
+    }
+    .item2 {
+        display: inline-block;
+        height: auto;
+        width: 500px;
+        background: magenta;
+        vertical-align: top;
+        margin-left: 15px;
+    }
+    /* Transition */
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0)
+        }
+        100% {
+            transform: translateX(-100%)
+        }
+    }
+</style>
+
 
