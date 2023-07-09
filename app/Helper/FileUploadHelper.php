@@ -7,7 +7,7 @@ class FileUploadHelper
     public function uploadImageToStorage($image, $path)
     {
         $filename = uniqid() . '.' . $image->getClientOriginalExtension();
-        $image->storeAs('public' . $path, $filename);
+        $image->storeAs($path, $filename);
         $filePath = 'storage' . $path . "/" . $filename;
 
         return $filePath;

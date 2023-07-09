@@ -19,18 +19,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['prefix' => '/'], function () {
-    Route::redirect('/','home');
+    Route::redirect('/', 'home');
     Route::view('home', 'home')->name('home');
     Route::view('posts', 'post')->name('post');
     Route::view('about', 'about')->name('about');
 
 
-//
-//    Route::prefix('post')->group( function () {
-//            Route::get('show', [PostController::class, 'show']);
-//        }
-//    );
-    Route::resource('post', PostController::class);
+
+    Route::get('/post/{id}', [PostController::class, 'show']);
 
     Route::view('contact', 'contact')->name('contact');
 });
