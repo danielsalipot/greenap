@@ -10,6 +10,7 @@ use App\Models\PostAsset;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Session;
 
 
 
@@ -22,15 +23,17 @@ class PostController extends Controller
     {
 
         $posts = Post::with('assets')
-        ->where('status',0)
-        ->orderBy('updated_at', 'desc')
-        ->paginate(20);
+            ->where('status', 0)
+            ->orderBy('updated_at', 'desc')
+            ->paginate(20);
         $stat = 0;
-        return view('admin.post.index',
+        return view(
+            'admin.post.index',
             [
                 'stat' => $stat,
                 'posts' => $posts,
-            ]);
+            ]
+        );
     }
 
     /**
@@ -60,13 +63,12 @@ class PostController extends Controller
                 }
             }
             DB::commit();
+            Session::flash('message', 'Post Successfuly Added to Drafts');
             return redirect('/admin/post');
         } catch (\Throwable $th) {
             DB::rollback();
             return back();
         }
-
-
     }
 
     /**
@@ -74,7 +76,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::with('assets','users')->find($id);
+        $post = Post::with('assets', 'users')->find($id);
 
         return view('show', [
             'post' => $post
@@ -102,7 +104,7 @@ class PostController extends Controller
             $post->update([
                 'title' => $request->title,
                 'description' => $request->description,
-                'body'=>$request->body,
+                'body' => $request->body,
                 'status' => $request->status ?? 0,
                 'visibility' => $request->visibility ?? 0,
                 'featured' => $request->featured ?? 0,
@@ -127,6 +129,7 @@ class PostController extends Controller
             }
 
             DB::commit();
+            Session::flash('message', 'Successfully Updated');
             return back();
         } catch (\Throwable $th) {
             dd($th);
@@ -143,10 +146,11 @@ class PostController extends Controller
     {
         DB::beginTransaction();
         try {
-            File::deleteDirectory("storage/posts/post_$post->id");
+            File::deleteDirectory("uploads/posts/post_$post->id");
             $post->delete();
             DB::commit();
 
+            Session::flash('message', 'Post Deleted');
             return redirect('/admin/post');
         } catch (\Throwable $th) {
             DB::rollback();
@@ -155,19 +159,22 @@ class PostController extends Controller
         }
     }
 
-    public function posted(){
+    public function posted()
+    {
 
         $posts = Post::with('assets')
-        ->where('status',1)
-        ->orderBy('updated_at', 'desc')
-        ->orderBy('featured', 'desc')
-        ->orderBy('visibility','desc')
-        ->paginate(20);
+            ->where('status', 1)
+            ->orderBy('updated_at', 'desc')
+            ->orderBy('featured', 'desc')
+            ->orderBy('visibility', 'desc')
+            ->paginate(20);
         $stat = 1;
-        return view('admin.post.index',
+        return view(
+            'admin.post.index',
             [
                 'stat' => $stat,
                 'posts' => $posts,
-            ]);
+            ]
+        );
     }
 }
