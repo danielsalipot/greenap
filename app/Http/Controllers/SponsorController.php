@@ -108,7 +108,7 @@ class SponsorController extends Controller
     {
         DB::beginTransaction();
         try {
-            File::deleteDirectory("uploads/sponsors/sponsor_$sponsor->id");
+            File::deleteDirectory("storage/sponsors/sponsor_$sponsor->id");
             $sponsor->delete();
             DB::commit();
 

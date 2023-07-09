@@ -146,7 +146,7 @@ class PostController extends Controller
     {
         DB::beginTransaction();
         try {
-            File::deleteDirectory("uploads/posts/post_$post->id");
+            File::deleteDirectory("storage/posts/post_$post->id");
             $post->delete();
             DB::commit();
 
