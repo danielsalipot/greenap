@@ -1,4 +1,4 @@
-<div class="container swiper lg:max-w-full min-[320px]:max-w-[400px]">
+<div class="swiper lg:max-w-full min-[320px]:max-w-[400px]">
 
     <div class="slide-container-ft">
         <div class="swiper-wrapper">
@@ -8,9 +8,7 @@
                     <div class="grid {{ count($post->assets) === 1 ? 'lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1' : 'lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1' }}  ">
                         <div class="w-full block">
                             <div class="m-8">
-                                <div class="flex items-center justify-center">
-                                    <img src="{{ asset($post->assets[0]->link) }}" class="rounded-[20px]">
-                                </div>
+                                <img src="{{ asset($post->assets[0]->link) }}" class="rounded-[20px] w-[500px] h-[250px] object-cover">
                                 <p class="font-normal mt-3 text-caper font-hind lg:text-left min-[320px]:text-center text-sm">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
                                 </p>
@@ -38,7 +36,7 @@
                                     </div>
                                 </div>
 
-                                <button onclick="window.location.href = '/post/{{$post->id}}'" class="bg-muesli w-full justify-between flex items-center rounded-none px-4 py-2 text-white hover:drop-shadow-caper">Read More <i class="ml-3 fa-solid fa-arrow-right"></i></button>
+                                <button onclick="window.location.href = '/post/{{$post->id}}'" class="bg-muesli lg:w-1/2 min-[320px]:w-full justify-between flex items-center rounded-none px-4 py-2 text-white hover:drop-shadow-caper">Read More <i class="ml-3 fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
 
@@ -46,7 +44,7 @@
                         <div class="w-full items-center flex">
                             <div class="m-8 ">
                                 <div class="">
-                                    <img src="{{ asset($post->assets[1]->link) }}" class="rounded-[20px] ">
+                                    <img src="{{ asset($post->assets[1]->link) }}" class="rounded-[20px] w-[500px] h-[250px] object-cover">
                                 </div>
                                 <p class="font-normal font-hind mt-3 text-caper text-sm text-right">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
@@ -68,7 +66,6 @@
 <style>
     .container {
         width: 100%;
-        padding: 60px 0;
     }
     .slide-container {
         margin: 0 30px;

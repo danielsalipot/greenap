@@ -18,14 +18,14 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="">
+                        <img class="w-10 h-10 rounded-full" src="/assets/images/Blank-Profile.jpg" alt="">
                         <span class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="grid justify-items-center">
-            <img src="{{ asset($post->assets[0]->link) }}" class="rounded-[20px] lg:w-2/3 min-[320px]:w-full ">
+            <img src="{{ asset($post->assets[0]->link) }}" class="rounded-[20px] lg:w-[700px] lg:h-[350px] object-cover  min-[320px]:w-full ">
             <p class="font-normal first-letter:text-7xl text-justify  first-letter:font-bold lg:leading-loose sm:leading-loose md:leading-loose min-[320px]:leading-loose  lg:mx-32 min-[320px]:px-4 font-hind my-8 text-muesli lg:text-lg ">
                 {{$post->body}}
             </p>
