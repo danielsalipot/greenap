@@ -2,22 +2,18 @@
 
     <div class="slide-container-ft">
         <div class="swiper-wrapper">
-
             @foreach($ftPosts as $post)
                 <div class="swiper-slide">
                     <div class="grid {{ count($post->assets) === 1 ? 'lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1' : 'lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1' }}  ">
-                        <div class="w-full block">
-                            <div class="m-8">
-                                <img src="{{ asset($post->assets[0]->link) }}" class="rounded-[20px] w-[500px] h-[250px] object-cover">
-                                <p class="font-normal mt-3 text-caper font-hind lg:text-left min-[320px]:text-center text-sm">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
-                                </p>
+                        <div class="w-full items-center flex">
+                            <div class="m-8 ">
+                                <div class="">
+                                    <img src="{{ asset($post->assets[0]->link) }}" class="rounded-[20px] w-[500px] h-[250px] object-cover">
+                                </div>
                             </div>
                         </div>
-
                         <div class="w-full items-center flex">
                             <div class="m-8 min-[320px]:text-center lg:text-left">
-
                                 <h1 class="text-4xl mb-2 text-muesli font-extrabold">{{$post->title}}</h1>
                                 <span class="bg-caper w-auto text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">Featured</span>
 
@@ -46,9 +42,6 @@
                                 <div class="">
                                     <img src="{{ asset($post->assets[1]->link) }}" class="rounded-[20px] w-[500px] h-[250px] object-cover">
                                 </div>
-                                <p class="font-normal font-hind mt-3 text-caper text-sm text-right">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, atque culpa cum dolorum hic impedit, in incidunt itaque iusto minus modi molestiae nulla quas reiciendis tempora totam ullam vitae voluptatem!
-                                </p>
                             </div>
                         </div>
                         @else

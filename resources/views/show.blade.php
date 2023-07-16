@@ -7,8 +7,9 @@
     <div class="flex content-stretch min-[320px]:m-8 md:my-16">
         <div class="border flex-grow my-auto border-muesli border"></div>
             <div class="ml-8 text-right ">
-                <span class="bg-caper w-auto text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">{{ $post->featured == 1 ? "Featured" :  "Category"}}</span>
-
+                @if($post->featured == 1)
+                    <span class="bg-caper w-auto text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">Featured</span>
+                @endif
                 <h1 class="lg:text-7xl min-[320px]:text-6xl font-extrabold text-muesli">{{$post->title}}</h1>
                 <div class="flex justify-end items-center space-x-4 ">
                     <div class="dark:text-white">

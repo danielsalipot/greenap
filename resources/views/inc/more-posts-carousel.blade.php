@@ -4,7 +4,7 @@
         <span class="absolute px-6 font-bold text-lg text-muesli  -translate-x-1/2 bg-black-white left-1/2 dark:text-white dark:bg-gray-900">More Posts</span>
     </div>
     <div class="container swiper lg:max-w-full min-[320px]:max-w-[400px]">
-        <div class="slide-container">
+        <div class="slide-container ">
             <div class="card-wrapper swiper-wrapper">
                 @foreach($posts as $post)
                 <div class="card swiper-slide">
@@ -12,10 +12,9 @@
                         <a href="#">
                             <img class="rounded-t-[20px] object-cover w-full h-[200px]" src="{{ asset($post->assets[0]->link) }}" alt="" />
                         </a>
-                        <div class="p-6 space-y-4">
-                            <a href="#" class="space-y-1">
-                                <span class="bg-caper text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">Category</span>
-                                <h5 class="font text-3xl font-extrabold tracking-tight text-muesli dark:text-white line-clamp-3">{{$post->title}}</h5>
+                        <div class="p-6 space-y-4 ">
+                            <a href="/post/{{$post->id}}" class="space-y-1">
+                                <h5 class="font text-3xl font-extrabold tracking-tight text-muesli dark:text-white">{{$post->title}}</h5>
                             </a>
                             <p class="mb-3 font-normal text-sm font-hind text-muesli dark:text-gray-400 line-clamp-3">{{$post->description}}</p>
                             <div class="flex items-center space-x-2">
@@ -57,4 +56,6 @@
         }
     }
 </style>
+
+
 

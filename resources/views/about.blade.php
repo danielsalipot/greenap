@@ -1,7 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    @include('inc.searchbar')
-
     <div class="m-8">
         <div class="flex content-stretch min-[320px]:m-8 md:my-16 text-center">
             <h1 class="lg:text-6xl min-[320px]:text-4xl mr-8 font-extrabold text-muesli">Who We Are</h1>
@@ -243,18 +241,17 @@
             <div class="border flex-grow my-auto border-muesli border min-[320px]:invisible lg:visible"></div>
         </div>
         <div class="bg-transparent py-12 sm:py-8">
-            <div class="max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center min-[320px]:grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                     @foreach($sponsor_member as $member)
                         <div class="text-center lg:p-12 min-[320px]:p-8">
-                            <img data-popover-target="popover-company-profile-{{$member->id}}" data-popover-placement="right" class="col-span-2 max-h-16 w-full object-contain grayscale lg:col-span-1" src="{{$member->logo}}" alt="Transistor" width="100" height="100">
+                            <img data-popover-target="popover-company-profile-{{$member->id}}" data-popover-placement="bottom" class="cursor-pointer col-span-2 max-h-16 w-full object-contain grayscale lg:col-span-1" src="{{$member->logo}}" alt="Transistor" width="100" height="100">
                             <div class="text-caper font-bold text-lg text-center">{{$member->name}}</div>
                         </div>
-                        <div data-popover id="popover-company-profile-{{$member->id}}" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-80 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
+                        <div data-popover id="popover-company-profile-{{$member->id}}" role="tooltip" class="border-2 border-muesli  absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-80 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
                             <div class="p-3">
                                 <div class="flex">
                                     <div class="mr-3 shrink-0">
-
                                         <a href="#" class="block p-2 bg-gray-100 rounded-lg dark:bg-gray-700">
                                             <img class="w-8 h-8 rounded-full" src="{{$member->logo}}" alt="Flowbite logo">
                                         </a>
@@ -267,12 +264,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div data-popper-arrow></div>
                         </div>
                     @endforeach
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
         <div class="flex content-stretch min-[320px]:m-16 md:my-16 text-right">
             <div class="border flex-grow my-auto border-muesli border min-[320px]:invisible lg:visible"></div>
@@ -283,14 +278,13 @@
                 <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center min-[320px]:grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                     @foreach($sponsor_partner as $partner)
                         <div class="text-center lg:p-12 min-[320px]:p-8">
-                            <img data-popover-target="popover-company-profile-{{$partner->id}}" data-popover-placement="right" class="col-span-2 max-h-16 w-full object-contain grayscale lg:col-span-1" src="{{$partner->logo}}" alt="Transistor" width="100" height="100">
+                            <img data-popover-target="popover-company-profile-{{$partner->id}}" data-popover-placement="bottom" class="cursor-pointer col-span-2 max-h-16 w-full object-contain grayscale lg:col-span-1" src="{{$partner->logo}}" alt="Transistor" width="100" height="100">
                             <div class="text-caper font-bold text-lg text-center">{{$partner->name}}</div>
                         </div>
-                        <div data-popover id="popover-company-profile-{{$partner->id}}" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-80 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
+                        <div data-popover id="popover-company-profile-{{$partner->id}}" role="tooltip" class="border-2 border-muesli  absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-80 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
                             <div class="p-3">
                                 <div class="flex">
                                     <div class="mr-3 shrink-0">
-
                                         <a href="#" class="block p-2 bg-gray-100 rounded-lg dark:bg-gray-700">
                                             <img class="w-8 h-8 rounded-full" src="{{$partner->logo}}" alt="Flowbite logo">
                                         </a>
@@ -303,7 +297,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div data-popper-arrow></div>
                         </div>
                     @endforeach
                 </div>

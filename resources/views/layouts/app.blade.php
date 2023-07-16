@@ -19,14 +19,13 @@
                 margin: 0;
             }
 
-            .content {
-                /* The image used */
+            .bg {
+
                 background-image: url("/assets/images/ga-team-4.JPG");
-                /* Full height */
+
                 height: 100%;
                 width: 100%;
 
-                /* Center and scale the image nicely */
                 filter: grayscale(0.5) brightness(0.150);
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -38,7 +37,7 @@
         </style>
     </head>
     <body class="antialiased font-nunito bg-black-white">
-    <div class="content"></div>
+        <div class="bg"></div>
         <div class="grid grid-rows-1">
             <div class="z-40">
                 @include('inc.navbar')
