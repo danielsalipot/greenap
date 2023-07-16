@@ -21,7 +21,7 @@
             </ul>
         </div>
         <a href="#" class="flex items-center">
-            <img src="{{asset('assets/images/greenap-logo.png')}}" class="h-14" alt="GreenAP Logo" />
+            <img src="{{asset('assets/images/greenap-logo.png')}}" class="h-[25%]" alt="GreenAP Logo" />
         </a>
     </div>
 </nav>
