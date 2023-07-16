@@ -1,16 +1,14 @@
 <div class="">
     <div class="inline-flex items-center justify-center w-full">
-        <hr class="w-full mx-8 my-16 border-2 border-muesli ">
-        <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
-            <label class="text-xl font-bold text-muesli"> More Posts </label>
-        </div>
+        <hr class="w-96 border-t-2 border-muesli h-px my-8 dark:bg-gray-700">
+        <span class="absolute px-6 font-bold text-lg text-muesli  -translate-x-1/2 bg-black-white left-1/2 dark:text-white dark:bg-gray-900">More Posts</span>
     </div>
     <div class="container swiper lg:max-w-full min-[320px]:max-w-[400px]">
         <div class="slide-container">
             <div class="card-wrapper swiper-wrapper">
                 @foreach($posts as $post)
                 <div class="card swiper-slide">
-                    <div class="max-w-sm lg:max-w-[350px] bg-white border-2 border-muesli rounded-[20px] dark:bg-gray-800 dark:border-gray-700">
+                    <div class="max-w-sm lg:max-w-[350px] bg-black-white border-2 border-muesli rounded-[20px] dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
                             <img class="rounded-t-[20px] object-cover w-full h-[200px]" src="{{ asset($post->assets[0]->link) }}" alt="" />
                         </a>
