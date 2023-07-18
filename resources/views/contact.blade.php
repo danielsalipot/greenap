@@ -9,8 +9,8 @@
                         <h1 class="lg:text-6xl min-[320px]:text-4xl ml-8 font-bold text-black">Contact Us</h1>
                     </div>
                     <div class="grid pt-8 min-[320px]:grid-cols-1 md:grid-cols-2 items-start">
-                        <div class="h-[80%] max-w-full mx-4">
-                            <img src="/assets/images/img-3.jpg" class="h-full w-full">
+                        <div class="h-[80%] max-w-full mx-4 object-cover">
+                            <img src="/assets/images/ga-team-3.jpg" class="">
                         </div>
 
                         <form action="/admin/message" method="POST">

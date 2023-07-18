@@ -82,6 +82,13 @@ if (toTopButton) {
     };
 }
 
+const bg = document.querySelector(".bg")
+document.addEventListener('DOMContentLoaded', (e)=>{
+    setTimeout(() => {
+        bg.classList.add('display-none')
+    }, 4000)
+})
+
 
 
 
