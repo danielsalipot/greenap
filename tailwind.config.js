@@ -10,8 +10,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily:{
-                'nunito': ['Nunito','sans-serif'],
-                'hind': ['Hind','sans-serif'],
+                'raleway': ['Raleway', 'sans-serif'],
+                'open-sans':['Open Sans', 'sans-serif'],
             },
             colors:{
                 'muesli': '#978853',
@@ -25,7 +25,22 @@ module.exports = {
                 'caper': '6px 6px 0 rgb(170, 186, 130)',
                 'caper-thin': '3px 2px 0 rgb(170, 186, 130)',
             },
-        },
+            keyframes:{
+                'fade-in-right': {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateX(20px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateX(0)'
+                    },
+                }
+            },
+            animation:{
+                'fade-in-right': 'fade-in-right 0.5s ease-out'
+            }
+        }
     },
     plugins: [
         require('flowbite/plugin')

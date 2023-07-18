@@ -14,30 +14,36 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
         <title>Green AP</title>
         <style>
-            body, html {
-                height: 100%;
-                margin: 0;
-            }
-
             .bg {
-
-                background-image: url("/assets/images/ga-team-4.JPG");
-
-                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-image: url("/assets/gifs/ga-bg.gif");
+                height: 100vh;
                 width: 100%;
-
-                filter: grayscale(0.5) brightness(0.150);
                 background-repeat: no-repeat;
                 background-size: cover;
-                position: absolute;
-                z-index: -1;
-                opacity: 0.8;
+                z-index: 200;
+            }
 
+            .bg.display-none {
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-image: url("/assets/gifs/ga-bg.gif");
+                height: 100vh;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: -10;
+                opacity: 0;
+                transition: all 0.5s;
             }
         </style>
     </head>
-    <body class="antialiased font-nunito bg-black-white">
-        <div class="bg"></div>
+
+    <body class="antialiased font-raleway bg-black-white">
+
         <div class="grid grid-rows-1">
             <div class="z-40">
                 @include('inc.navbar')
@@ -55,6 +61,7 @@
         </div>
         <script src="https://kit.fontawesome.com/273827b7bf.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     </body>
 </html>
 

@@ -4,7 +4,7 @@
         <div class="swiper-wrapper">
             @foreach($ftPosts as $post)
                 <div class="swiper-slide">
-                    <div class="grid {{ count($post->assets) === 1 ? 'lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1' : 'lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1' }}  ">
+                    <div class="grid {{ count($post->assets) === 1 ? 'lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1' : 'lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1' }}  ">
                         <div class="w-full items-center flex">
                             <div class="m-8 ">
                                 <div class="">
@@ -14,10 +14,10 @@
                         </div>
                         <div class="w-full items-center flex">
                             <div class="m-8 min-[320px]:text-center lg:text-left">
-                                <h1 class="text-4xl mb-2 text-muesli font-extrabold">{{$post->title}}</h1>
+                                <h1 class="text-4xl mb-2 text-muesli font-bold">{{$post->title}}</h1>
                                 <span class="bg-caper w-auto text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">Featured</span>
 
-                                <p class="font-normal my-3 text-coriander text-base font-hind">
+                                <p class="font-normal my-3 text-coriander  font-open-sans">
                                     {{$post->description}}
                                 </p>
                                 <hr class="border-t border-coriander">

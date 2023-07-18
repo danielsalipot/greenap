@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
-
+    <div class="bg flex items-center justify-center ">
+        <img src="{{asset('assets/images/greenap-logo.png')}}" class="lg:h-24 md:h-16 min-[320px]:h-16" alt="GreenAP Logo" />
+    </div>
     @include('inc.searchbar')
     @include('inc.featured-posts-carousel')
     @include('inc.more-posts-carousel')
@@ -10,7 +12,7 @@
         <div class="border flex-grow my-auto border-muesli border"></div>
     </div>
     <div class="grid p-4 min-[320px]:grid-cols-1 lg:grid-cols-2 lg:gap-8 items-center justify-items-center">
-        <p class="font-normal font-hind mt-3 text-muesli lg:text-lg min-[320px]:m-8 min-[390px]:mx-4 ">
+        <p class="font-normal font-open-sans mt-3 text-muesli lg:text-lg min-[320px]:m-8 min-[390px]:mx-4 ">
             Green Architecture Advocacy Philippines (Green AP) is a civic non-profit organization that is concerned about the environment
             and takes action by promoting sustainable development of the built environment.
             <br><br>
@@ -33,7 +35,7 @@
             <div class="">
                 <img src="/assets/gifs/ga-vision.gif" class="rounded-[20px]">
             </div>
-            <p class="font-medium mt-3 lg:text-lg text-muesli text-md min-[320px]:m-4 ">
+            <p class="font-normal font-open-sans mt-3 lg:text-lg text-muesli text-md min-[320px]:m-4 ">
                 The Green Architecture Advocacy Philippines encourages and promotes the global adoption of sustainable green building and
                 development practices by implementing universally accepted tools and performance criteria.
                 <br><br>
@@ -44,7 +46,7 @@
         <div class="grid p-8 min-[320px]:grid-cols-1 lg:grid-cols-2 lg:gap-8 items-center justify-items-center">
             <div class="items-center">
                 <h1 class="lg:text-6xl min-[320px]:text-4xl font-extrabold text-muesli">Green Architecture</h1>
-                <p class="font-medium mt-3  lg:text-lg text-muesli text-md min-[320px]:m-4 ">
+                <p class="font-normal font-open-sans mt-3  lg:text-lg text-muesli text-md min-[320px]:m-4 ">
                     Green architecture involves a whole-building approach to sustainability by recognizing performance in human and
                     environmental health. These involve sustainable site selection and development, energy efficiency, water conservation, clean air, use of low-impact materials, renewable resource, and preserving indoor air quality.                        </p>
             </div>
@@ -59,7 +61,7 @@
             <h1 class="lg:text-6xl min-[320px]:text-4xl ml-8 font-extrabold text-muesli">GreenAP OFFICERS FY2023</h1>
         </div>
 
-            <div class="grid lg:grid-cols-4  min-[320px]:grid-cols-1 gap-x-8  sm:grid-cols-1 sm:gap-x-10">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 min-[320px]:grid-cols-1 gap-x-8  sm:grid-cols-1 sm:gap-x-10">
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-coriander">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
@@ -163,7 +165,7 @@
 
             <h1 class="lg:text-6xl min-[320px]:text-4xl ml-8 font-extrabold text-muesli">Youth Advocates for Survivability, Self-Sufficiency and Sustainability (YASSS)</h1>
 
-            <div class="grid lg:grid-cols-4 min-[320px]:grid-cols-1 gap-x-8  sm:grid-cols-1 sm:gap-x-10 ">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 min-[320px]:grid-cols-1 gap-x-8  sm:grid-cols-1 sm:gap-x-10 ">
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-coriander">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
@@ -302,5 +304,6 @@
             </div>
         </div>
 @endsection
+
 
 

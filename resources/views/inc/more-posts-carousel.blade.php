@@ -14,7 +14,7 @@
                         </a>
                         <div class="p-6 space-y-4 ">
                             <a href="/post/{{$post->id}}" class="space-y-1">
-                                <h5 class="font text-3xl font-extrabold tracking-tight text-muesli dark:text-white">{{$post->title}}</h5>
+                                <h5 class="font text-xl font-bold tracking-tight text-muesli dark:text-white">{{$post->title}}</h5>
                             </a>
                             <p class="mb-3 font-normal text-sm font-hind text-muesli dark:text-gray-400 line-clamp-3">{{$post->description}}</p>
                             <div class="flex items-center space-x-2">
