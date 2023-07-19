@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('content')
-    <div class="bg flex items-center justify-center ">
-        <img src="{{asset('assets/images/greenap-logo.png')}}" class="lg:h-24 md:h-16 min-[320px]:h-16" alt="GreenAP Logo" />
+    <div class="bg flex items-center justify-center">
+        <div class="absolute bottom-12 right-12 grid justify-items-end">
+            <img src="{{asset('assets/images/greenap-logo.png')}}" class="animate-fade-in-right lg:h-24 md:h-16 min-[320px]:h-16" alt="GreenAP Logo" />
+            <h1 class="text-muesli text-right text-xl font-bold animate-fade-in-right min-[320px]:ml-4 min-[320px]:mt-4">The Philippines’ oldest multidisciplinary Green Architecture organization.</h1>
+        </div>
     </div>
     @include('inc.searchbar')
     @include('inc.featured-posts-carousel')
@@ -85,7 +88,7 @@
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-coriander">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                            <img src="\assets\images\DSC08447-min.JPG">
                         </div>
                         <p class="text-muesli text-xl font-bold">Armando T. Tantoco</p>
                         <p class="text-xs font-light italic">UAP</p>
@@ -95,7 +98,7 @@
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-coriander">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                            <img src="/assets/images/DSC08633-min.JPG">
                         </div>
                         <p class="text-muesli text-xl font-bold">Alfredo Bautista</p>
                         <p class="text-xs font-light italic">UAP, Greeen ADP, EDGE</p>
@@ -115,7 +118,7 @@
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-coriander">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                            <img src="/assets/images/DSC08355-min.JPG">
                         </div>
                         <p class="text-muesli text-xl font-bold">Andy Reformado</p>
                         <p class="text-xs font-light italic">UAP</p>
@@ -125,7 +128,7 @@
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-coriander">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                            <img src="/assets/images/DSC08320-min.JPG">
                         </div>
                         <p class="text-muesli text-xl font-bold">Rex S. Chua Tak</p>
                         <p class="text-xs font-light italic">UAP</p>
@@ -144,7 +147,7 @@
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-coriander">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                            <img src="/assets/images/DSC08727-min.JPG">
                         </div>
                         <p class="text-muesli text-xl font-bold">Cedel S. Austria</p>
                         <p class="text-xs font-light italic">UAP, RMP</p>
@@ -154,10 +157,10 @@
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-coriander">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                            <img src="/assets/images/DSC08683-min.JPG">
                         </div>
                         <p class="text-muesli text-xl font-bold">Jerry Chun</p>
-                        <p class="text-xs font-light italic">UAP, RMP, FRIA</p>
+                        <p class="text-xs font-light italic">UAP., NAMPAP., EAROPH. FIRA., FRIMPb., STE., PGBI+ADP</p>
                         Membership Director
                     </div>
                 </div>
@@ -171,7 +174,7 @@
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/Blank-Profile.jpg">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Toni Dominique B.Madulid</p>
+                        <p class="text-muesli text-xl font-bold">Toni Dominique B. Madulid</p>
                         Director
                     </div>
                 </div>
@@ -198,7 +201,7 @@
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-coriander">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                            <img src="/assets/images/DSC08355-min.JPG">
                         </div>
                         <p class="text-muesli text-xl font-bold">Edgardo V. Reformado</p>
                         <p class="text-xs font-light italic">FUAP</p>
@@ -303,6 +306,16 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            const bg = document.querySelector(".bg")
+
+            document.addEventListener('DOMContentLoaded', (e)=>{
+                setTimeout(() => {
+                    bg.classList.add('display-none')
+                }, 4000)
+            })
+        </script>
 @endsection
 
 

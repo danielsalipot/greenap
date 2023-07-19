@@ -1,9 +1,9 @@
-<div class="swiper lg:max-w-full min-[320px]:max-w-[400px]">
+<div class="swiper lg:max-w-full min-[320px]:max-w-[400px] md:max-w-[600px]">
 
     <div class="slide-container-ft">
         <div class="swiper-wrapper">
             @foreach($ftPosts as $post)
-                <div class="swiper-slide">
+                <div class="swiper-slide ">
                     <div class="grid {{ count($post->assets) === 1 ? 'lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1' : 'lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1' }}  ">
                         <div class="w-full items-center flex">
                             <div class="m-8 ">

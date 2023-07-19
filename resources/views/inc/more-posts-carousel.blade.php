@@ -3,7 +3,7 @@
         <hr class="w-96 border-t-2 border-muesli h-px my-8 dark:bg-gray-700">
         <span class="absolute px-6 font-bold text-lg text-muesli  -translate-x-1/2 bg-black-white left-1/2 dark:text-white dark:bg-gray-900">More Posts</span>
     </div>
-    <div class="container swiper lg:max-w-full min-[320px]:max-w-[400px]">
+    <div class="container swiper lg:max-w-full min-[320px]:max-w-[400px] md:max-w-[800px]">
         <div class="slide-container ">
             <div class="card-wrapper swiper-wrapper">
                 @foreach($posts as $post)
