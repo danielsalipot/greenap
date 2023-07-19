@@ -1,11 +1,9 @@
 <nav class="w-full border-gray-200 dark:bg-gray-900 dark:border-gray-700 fixed">
-    <div class="max-w-screen-xl px-8 flex flex-wrap items-center justify-between mt-10 mx-auto">
+    <div class="max-w-screen-xl px-8 flex flex-wrap items-center justify-between mt-10 mb-10 mx-auto">
         <a href="/home" class="flex items-center">
             <img src="{{asset('assets/images/greenap-logo.png')}}" class="lg:h-14 md:h-8 min-[320px]:h-8" alt="GreenAP Logo" />
         </a>
-
         <div class="absolute top-10 right-10 grid justify-items-end">
-
             <nav x-data="{ open: false }">
                 <button class="text-muesli w-10 h-10 relative focus:outline-none" @click="open = !open" data-collapse-toggle="navbar-hamburger" type="button" aria-controls="navbar-hamburger" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>

@@ -28,7 +28,7 @@ var swiper = new Swiper(".slide-container", {
             slidesPerView: 1,
         },
         768: {
-            slidesPerView: 1,
+            slidesPerView: 2,
         },
         1100:{
             slidesPerView: 2
@@ -60,6 +60,7 @@ var swiper = new Swiper(".slide-container-ft", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+
 })
 
 

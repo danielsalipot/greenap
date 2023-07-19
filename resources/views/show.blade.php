@@ -27,7 +27,7 @@
         </div>
         <div class="grid justify-items-center">
             <img src="{{ asset($post->assets[0]->link) }}" class="rounded-[20px] lg:w-[700px] lg:h-[350px] object-cover  min-[320px]:w-full ">
-            <p class="font-normal first-letter:text-7xl text-justify  first-letter:font-bold lg:leading-loose sm:leading-loose md:leading-loose min-[320px]:leading-loose  lg:mx-32 min-[320px]:px-4 font-open-sans my-8 text-muesli lg:text-lg ">
+            <p class="font-normal first-letter:text-7xl text-left first-letter:font-bold lg:leading-loose sm:leading-loose md:leading-loose min-[320px]:leading-loose  lg:mx-32 min-[320px]:px-4 font-open-sans my-8 text-muesli lg:text-lg ">
                 {{$post->body}}
             </p>
         </div>
