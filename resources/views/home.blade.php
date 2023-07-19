@@ -159,8 +159,8 @@
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/DSC08683-min.JPG">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Jerry Chun</p>
-                        <p class="text-xs font-light italic">UAP., NAMPAP., EAROPH. FIRA., FRIMPb., STE., PGBI+ADP</p>
+                        <p class="text-muesli text-xl font-bold">Jerry U. Chun</p>
+                        <p class="text-xs font-light italic">UAP., NAMPAP., PIFPO., EAROPH. FIRA., FRIMPb., GreenAP., STE., PGBI+ADP</p>
                         Membership Director
                     </div>
                 </div>
