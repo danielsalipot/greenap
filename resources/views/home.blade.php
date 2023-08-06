@@ -136,8 +136,8 @@
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-muesli">
-                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;" class="bg-slate-300">
+                            <img src="/assets/images/dulce.png">
                         </div>
                         <p class="text-xl font-bold">Atty. Dulce Punzalan</p>
                         <p class="text-md">Special Projects Director</p>
@@ -176,7 +176,7 @@
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                            <img src="/assets/images/parinas.png">
                         </div>
                         <p class="text-xl font-bold">Leo Pariñas</p>
                         <p class="text-sm italic">UAP, Int'l Assoc AIA</p>
@@ -221,8 +221,8 @@
             <div class="grid lg:grid-cols-4 md:grid-cols-2 min-[320px]:grid-cols-1 gap-x-8  sm:grid-cols-1 sm:gap-x-10 ">
                 <div class="text-center lg:p-12 min-[320px]:p-8">
                     <div class="flex flex-col items-center text-muesli">
-                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden; object-fit:contain;">
+                            <img src="/assets/images/madulid.png">
                         </div>
                         <p class="text-xl font-bold">Toni Dominique B. Madulid</p>
                         <p class="text-md">Director</p>
