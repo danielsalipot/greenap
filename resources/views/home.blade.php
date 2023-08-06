@@ -2,7 +2,7 @@
 @section('content')
     <div class="bg flex items-center justify-center">
         <div class="absolute bottom-12 right-12 grid justify-items-end">
-            <img src="{{asset('assets/images/greenap-logo.png')}}" class="animate-fade-in-right lg:h-24 md:h-16 min-[320px]:h-16" alt="GreenAP Logo" />
+            <img src="{{asset('assets/images/greenap-logo-3d.png')}}" class="animate-fade-in-right lg:h-36 md:h-20 min-[320px]:h-20" alt="GreenAP Logo" />
             <h1 class="text-muesli text-right text-xl font-bold animate-fade-in-right min-[320px]:ml-4 min-[320px]:mt-4">The Philippines’ oldest multidisciplinary Green Architecture organization.</h1>
         </div>
     </div>
@@ -26,8 +26,6 @@
             <img src="/assets/images/ga-team-2.JPG" class="rounded-[20px] ">
         </div>
     </div>
-
-
 
     <div class="flex content-stretch min-[320px]:m-8 md:my-8 text-center">
         <div class="border flex-grow my-auto border-muesli border"></div>
@@ -66,176 +64,179 @@
 
             <div class="grid lg:grid-cols-4 md:grid-cols-2 min-[320px]:grid-cols-1 gap-x-8  sm:grid-cols-1 sm:gap-x-10">
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/DSC08303.JPG" class="">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Sylvester Shaun D. Seño</p>
-                        <p class="text-xs font-light italic">MArch-CTM, FRIA, Assoc AIA, ICOMOS, PGBI</p>
-                        Chairman
+                        <p class="text-xl font-bold">Sylvester Shaun D. Seño</p>
+                        <p class="text-sm italic">MArch-CTM, FRIA, Assoc AIA, ICOMOS, PGBI</p>
+                        <hr>
+                        <p class="text-md">Chairman</p>
                     </div>
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/DSC08393.JPG">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Edgardo L. Mallari</p>
-                        <p class="text-xs font-light italic">UAP,CBP</p>
-                        Deputy Chair
+                        <p class="text-xl font-bold">Edgardo L. Mallari</p>
+                        <p class="text-sm italic">UAP, CBP</p>
+                        <p class="text-md">Deputy Chair</p>
                     </div>
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="\assets\images\DSC08447-min.JPG">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Armando T. Tantoco</p>
-                        <p class="text-xs font-light italic">UAP</p>
-                        Finance Director
+                        <p class="text-xl font-bold">Armando T. Tantoco</p>
+                        <p class="text-sm italic">UAP</p>
+                        <p class="text-md">Finance Director</p>
                     </div>
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/DSC08633-min.JPG">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Alfredo Bautista</p>
-                        <p class="text-xs font-light italic">UAP, Greeen ADP, EDGE</p>
-                        Programs Director
+                        <p class="text-xl font-bold">Alfredo Bautista</p>
+                        <p class="text-sm italic">UAP, Greeen ADP, EDGE</p>
+                        <p class="text-md">Programs Director</p>
                     </div>
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/DSC08772.JPG">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Carmelito Tatlonghari</p>
-                        <p class="text-xs font-light italic">MMP, LEED-AP, BD+C</p>
-                        Programs Deputy Director & Green Building Rating Standards Founding Member
+                        <p class="text-xl font-bold">Carmelito Tatlonghari</p>
+                        <p class="text-sm italic">MMP, LEED-AP, BD+C</p>
+                        <p class="text-md">Programs Deputy Director & Green Building Rating Standards Founding Member</p>
                     </div>
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/DSC08355-min.JPG">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Andy Reformado</p>
-                        <p class="text-xs font-light italic">UAP</p>
-                        Auditor
+                        <p class="text-xl font-bold">Andy Reformado</p>
+                        <p class="text-sm italic">UAP</p>
+                        <p class="text-md">Auditor</p>
                     </div>
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/DSC08320-min.JPG">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Rex S. Chua Tak</p>
-                        <p class="text-xs font-light italic">UAP</p>
-                        Logistics Director
+                        <p class="text-xl font-bold">Rex S. Chua Tak</p>
+                        <p class="text-sm italic">UAP</p>
+                        <p class="text-md">Logistics Director</p>
                     </div>
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
-                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
+                    <div class="flex flex-col items-center text-muesli">
+                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;" class="bg-slate-300">
+                            <img src="/assets/images/dulce.png">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Atty. Dulce Punzalan</p>
-                        Special Projects Director
+                        <p class="text-xl font-bold">Atty. Dulce Punzalan</p>
+                        <p class="text-md">Special Projects Director</p>
                     </div>
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/DSC08727-min.JPG">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Cedel S. Austria</p>
-                        <p class="text-xs font-light italic">UAP, RMP</p>
-                        Operations and Informations Technology  Director
+                        <p class="text-xl font-bold">Cedel S. Austria</p>
+                        <p class="text-sm italic">UAP, RMP</p>
+                        <p class="text-md">Operations and Informations Technology  Director</p>
                     </div>
                 </div>
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
+                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
+                            <img src="/assets/images/DSC08355-min.JPG">
+                        </div>
+                        <p class="text-xl font-bold">Edgardo V. Reformado</p>
+                        <p class="text-sm italic">FUAP</p>
+                        <p class="text-md">Emeritus Chairperson / Founding Chairperson / Council of Masters</p>
+                    </div>
+                </div>
+                <div class="text-center lg:p-12 min-[320px]:p-8">
+                    <div class="flex flex-col items-center text-muesli">
+                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
+                            <img src="/assets/images/Blank-Profile.jpg">
+                        </div>
+                        <p class="text-xl font-bold">Mike Peña</p>
+                        <p class="text-sm italic">UAP</p>
+                        <p class="text-md">Business Relations Director / Founding Member / Council of Masters</p>
+                    </div>
+                </div>
+                <div class="text-center lg:p-12 min-[320px]:p-8">
+                    <div class="flex flex-col items-center text-muesli">
+                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
+                            <img src="/assets/images/parinas.png">
+                        </div>
+                        <p class="text-xl font-bold">Leo Pariñas</p>
+                        <p class="text-sm italic">UAP, Int'l Assoc AIA</p>
+                        <p class="text-md">Business Relations</p>
+                    </div>
+                </div>
+                <div class="text-center lg:p-12 min-[320px]:p-8">
+                    <div class="flex flex-col items-center text-muesli">
+                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
+                            <img src="/assets/images/DSC08488.JPG">
+                        </div>
+                        <p class="text-xl font-bold">Maria Luisa Daya-Garcia</p>
+                        <p class="text-sm italic">UAP, Intl Assoc AIA, AA, CBP, ASSURE, PIArb Assoc</p>
+                        <p class="text-md">Immediate Past Chairperson</p>
+                    </div>
+                </div>
+                <div class="text-center lg:p-12 min-[320px]:p-8">
+                    <div class="flex flex-col items-center text-muesli">
+                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
+                            <img src="/assets/images/Blank-Profile.jpg">
+                        </div>
+                        <p class="text-xl font-bold">Aristotle Basa</p>
+                        <p class="text-sm italic">UAP, PIA, Int'l Assoc AIA</p>
+                        <p class="text-md">Continuing Professional Development Director</p>
+                    </div>
+                </div>
+                <div class="text-center lg:p-12 min-[320px]:p-8">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/DSC08683-min.JPG">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Jerry Chun</p>
-                        <p class="text-xs font-light italic">UAP., NAMPAP., EAROPH. FIRA., FRIMPb., STE., PGBI+ADP</p>
-                        Membership Director
+                        <p class="text-xl font-bold">Jerry U. Chun</p>
+                        <p class="text-sm italic">UAP., NAMPAP., PIFPO., EAROPH. FIRA., FRIMPb., GreenAP., STE., PGBI+ADP</p>
+                        <p class="text-md">Membership Director</p>
                     </div>
                 </div>
+
             </div>
 
             <h1 class="lg:text-6xl min-[320px]:text-4xl ml-8 font-extrabold text-muesli">Youth Advocates for Survivability, Self-Sufficiency and Sustainability (YASSS)</h1>
 
             <div class="grid lg:grid-cols-4 md:grid-cols-2 min-[320px]:grid-cols-1 gap-x-8  sm:grid-cols-1 sm:gap-x-10 ">
                 <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
+                    <div class="flex flex-col items-center text-muesli">
+                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden; object-fit:contain;">
+                            <img src="/assets/images/madulid.png">
+                        </div>
+                        <p class="text-xl font-bold">Toni Dominique B. Madulid</p>
+                        <p class="text-md">Director</p>
+                    </div>
+                </div>
+
+                <div class="text-center lg:p-12 min-[320px]:p-8">
+                    <div class="flex flex-col items-center text-muesli">
                         <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                             <img src="/assets/images/Blank-Profile.jpg">
                         </div>
-                        <p class="text-muesli text-xl font-bold">Toni Dominique B. Madulid</p>
-                        Director
-                    </div>
-                </div>
-                <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
-                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
-                        </div>
-                        <p class="text-muesli text-xl font-bold">Aristotle Basa</p>
-                        <p class="text-xs font-light italic">UAP, PIA, Int'l Assoc AIA</p>
-                        Continuing Professional Development Director
-                    </div>
-                </div>
-                <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
-                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
-                        </div>
-                        <p class="text-muesli text-xl font-bold">Lorenzo M. Estoye</p>
-                        <p class="text-xs font-light italic">UAP</p>
-                        Mentorship Director
-                    </div>
-                </div>
-                <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
-                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/DSC08355-min.JPG">
-                        </div>
-                        <p class="text-muesli text-xl font-bold">Edgardo V. Reformado</p>
-                        <p class="text-xs font-light italic">FUAP</p>
-                        Emeritus Chairperson / Founding Chairperson / Council of Masters
-                    </div>
-                </div>
-                <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
-                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
-                        </div>
-                        <p class="text-muesli text-xl font-bold">Mike Peña</p>
-                        <p class="text-xs font-light italic">UAP</p>
-                        Business Relations Director / Founding Member / Council of Masters
-                    </div>
-                </div>
-                <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
-                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/Blank-Profile.jpg">
-                        </div>
-                        <p class="text-muesli text-xl font-bold">Leo Pariñas</p>
-                        <p class="text-xs font-light italic">UAP, Int'l Assoc AIA</p>
-                        Business Relations
-                    </div>
-                </div>
-                <div class="text-center lg:p-12 min-[320px]:p-8">
-                    <div class="flex flex-col items-center text-coriander">
-                        <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                            <img src="/assets/images/DSC08488.JPG">
-                        </div>
-                        <p class="text-muesli text-xl font-bold">Maria Luisa Daya-Garcia</p>
-                        <p class="text-xs font-light italic">UAP, Intl Assoc AIA, AA, CBP, ASSURE, PIArb Assoc</p>
-                        Immediate Past Chairperson
+                        <p class="text-xl font-bold">Lorenzo M. Estoye</p>
+                        <p class="text-sm italic">UAP</p>
+                        <p class="text-md">Mentorship Director</p>
                     </div>
                 </div>
             </div>

@@ -59,7 +59,7 @@
             <div class="z-40">
                 @include('inc.navbar')
             </div>
-            <div class="container mx-auto mt-20">
+            <div class="container mx-auto lg:mt-28 md:mt-28 min-[320px]:mt-36">
 
                 @yield('content')
                 <button id="to-top-button" onclick="goToTop()" title="Go To Top"
