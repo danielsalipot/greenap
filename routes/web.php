@@ -23,7 +23,7 @@ Route::group(['prefix' => '/'], function () {
     Route::view('home', 'home')->name('home');
     Route::view('posts', 'post')->name('post');
     Route::view('about', 'about')->name('about');
-
+    Route::view('social', 'social')->name('social');
 
 
     Route::get('/post/{id}', [PostController::class, 'show']);
