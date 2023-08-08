@@ -17,7 +17,7 @@ module.exports = {
                 'muesli': '#978853',
                 'coriander': '#BAB390',
                 'sisal': '#C9C4A5',
-                'sisal-darker': '#C3BB9B',
+                'sisal-darker': '#a7a181',
                 'black-white': '#E3E1D5',
                 'caper': '#AABA82',
             },
