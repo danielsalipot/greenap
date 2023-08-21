@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SocialController;
 use App\Http\Controllers\SponsorController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,11 +33,21 @@ Route::group(['prefix' => '/'], function () {
     Route::view('contact', 'contact')->name('contact');
 });
 
-Route::prefix('admin')->group(
-    function () {
+Route::prefix('admin')->group(function () {
+    Route::middleware(['auth'])->group(function () {
         Route::resource('post', PostController::class);
         Route::get('posted', [PostController::class, 'posted']);
         Route::resource('sponsor', SponsorController::class);
         Route::resource('message', MessageController::class);
-    }
-);
+
+        Route::get('/dashboard', [AdminController::class, 'dashboard']);
+        Route::get('facebook/refresh', [SocialController::class, 'refreshData']);
+    });
+
+    Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
+    Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
+});
+
+Route::get('/login', function () {
+    return view('admin.login');
+})->name('login');

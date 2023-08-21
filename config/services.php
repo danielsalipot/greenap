@@ -30,5 +30,9 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
+    'facebook' => [
+        'client_id' => '566030639076816',
+        'client_secret' => 'def1e6d10aeaf726ca140643dc322f68',
+        'redirect' => 'https://greenap.test/admin/auth/facebook/callback',
+    ],
 ];
