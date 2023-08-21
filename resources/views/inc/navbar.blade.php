@@ -1,29 +1,46 @@
-
-<nav class="bg-transparent fixed w-full border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-8">
-        <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-muesli rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-muesli dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto min-[320px]:mb-6 sm:mb-6 lg:mb-0" id="navbar-dropdown">
-            <ul class="flex flex-col lg:space-x-20 font-extrabold text-muesli p-4 md:p-0 mt-4 border border-gray-100 rounded-lg sm:bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent min-[320px]:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                    <a href="/" class="block hover:underline underline-offset-8 decoration-2 py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:hover:text-caper  md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="/posts" class="block hover:underline underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-caper md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Posts</a>
-                </li>
-                <li>
-                    <a href="/about" class="block hover:underline underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-caper md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-                </li>
-                <li>
-                    <a href="/contact" class="block hover:underline underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-caper md:p-0 dark:text-white md:dark:hover:text-caper dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-                </li>
-            </ul>
+<nav class="w-full border-gray-200 dark:bg-gray-900 dark:border-gray-700 fixed ">
+    <div class="max-w-screen-xl px-8 flex flex-wrap items-center justify-between mt-10 mb-10 mx-auto">
+        <div class="lg:flex md:flex sm:block lg:items-center md:items-center absolute top-12 left-12">
+            <a href="/home" class="flex items-center ">
+                <img src="{{asset('assets/images/greenap-logo-3d.png')}}" class="lg:h-20 md:h-16 min-[320px]:h-16  hover:drop-shadow-lg " alt="GreenAP Logo" />
+            </a>
+            <p class="lg:text-xs min-[320px]:text-[10px] ml-2 text-muesli font-bold">The Philippines’ <br>oldest multidisciplinary <br> Green Architecture organization.</p>
         </div>
-        <a href="#" class="flex items-center">
-            <img src="{{asset('assets/images/greenap-logo.png')}}" class="h-14" alt="GreenAP Logo" />
-        </a>
+
+        <div class="absolute top-12 right-12 grid justify-items-end">
+            <nav x-data="{ open: false }">
+                <button class="text-muesli w-10 h-10 relative focus:outline-none" @click="open = !open" data-collapse-toggle="navbar-hamburger" type="button" aria-controls="navbar-hamburger" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                        <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                        <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                        <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                    </div>
+                </button>
+            </nav>
+
+            <div class="hidden" id="navbar-hamburger">
+                <ul class="flex text-right flex-col gap-y-3 font-bold mt-4 text-muesli animate-fade-in-right">
+                    <li>
+                        <a href="/" class="block underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded hover:text-caper md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="/posts" class="block underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded md:border-0 hover:text-caper md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Posts</a>
+                    </li>
+                    <li>
+                        <a href="/about" class="block underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded md:border-0 hover:text-caper md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="block underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded md:border-0 hover:text-caper md:p-0 dark:text-white md:dark:hover:text-caper dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li>
+                    <li>
+                        <a href="/social" class="block underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded md:border-0 hover:text-caper md:p-0 dark:text-white md:dark:hover:text-caper dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Socials</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
     </div>
 </nav>
 

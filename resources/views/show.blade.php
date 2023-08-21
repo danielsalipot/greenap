@@ -7,9 +7,10 @@
     <div class="flex content-stretch min-[320px]:m-8 md:my-16">
         <div class="border flex-grow my-auto border-muesli border"></div>
             <div class="ml-8 text-right ">
-                <span class="bg-caper w-auto text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">{{ $post->featured == 1 ? "Featured" :  "Category"}}</span>
-
-                <h1 class="lg:text-7xl min-[320px]:text-6xl font-extrabold text-muesli">{{$post->title}}</h1>
+                @if($post->featured == 1)
+                    <span class="bg-caper w-auto text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">Featured</span>
+                @endif
+                <h1 class="lg:text-5xl min-[320px]:text-2xl font-bold text-muesli">{{$post->title}}</h1>
                 <div class="flex justify-end items-center space-x-4 ">
                     <div class="dark:text-white">
                         <div class="font-bold text-muesli">Posted by {{$post->users->name}}</div>
@@ -26,7 +27,7 @@
         </div>
         <div class="grid justify-items-center">
             <img src="{{ asset($post->assets[0]->link) }}" class="rounded-[20px] lg:w-[700px] lg:h-[350px] object-cover  min-[320px]:w-full ">
-            <p class="font-normal first-letter:text-7xl text-justify  first-letter:font-bold lg:leading-loose sm:leading-loose md:leading-loose min-[320px]:leading-loose  lg:mx-32 min-[320px]:px-4 font-hind my-8 text-muesli lg:text-lg ">
+            <p class="font-normal first-letter:text-7xl text-left first-letter:font-bold lg:leading-loose sm:leading-loose md:leading-loose min-[320px]:leading-loose  lg:mx-32 min-[320px]:px-4 font-open-sans my-8 text-muesli lg:text-lg ">
                 {{$post->body}}
             </p>
         </div>

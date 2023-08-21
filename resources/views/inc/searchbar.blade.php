@@ -7,7 +7,7 @@
             <input type="search" id="default-search" class="bg-black-white block w-full p-2 pl-10 text-sm text-muesli border-[4px] border-sisal-darker focus:ring-0 focus:outline-0 hover:drop-shadow-caper focus:drop-shadow-caper hover:border-muesli focus:border-muesli focus:border-4" placeholder="Search">
         </div>
         <div class="col-start-3 text-right mx-8">
-            <label class="text-md text-sisal-darker font-bold"><i class="fal fa-people"></i></i> Visitors | 1</label>
+            <label class="text-md text-muesli font-bold"><i class="fal fa-people"></i>Visitors | 1</label>
         </div>
     </div>
 </form>
