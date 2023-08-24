@@ -108,16 +108,6 @@
     <div class="text-center lg:p-12 min-[320px]:p-8">
         <div class="flex flex-col items-center text-muesli">
             <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                <img src="/assets/images/Blank-Profile.jpg">
-            </div>
-            <p class="text-xl font-bold">Mike Peña</p>
-            <p class="text-sm italic">UAP</p>
-            <p class="text-md"><b>Business Relations Director / Founding Member / Council of Masters</b></p>
-        </div>
-    </div>
-    <div class="text-center lg:p-12 min-[320px]:p-8">
-        <div class="flex flex-col items-center text-muesli">
-            <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
                 <img src="/assets/images/Ar Leo Parinas edited-min.png">
             </div>
             <p class="text-xl font-bold">Leo Pariñas</p>
@@ -148,7 +138,7 @@
     <div class="text-center lg:p-12 min-[320px]:p-8">
         <div class="flex flex-col items-center text-muesli">
             <div style="width: 250px; height: 250px; margin-bottom: 5%; border-radius: 50%; overflow: hidden;">
-                <img src="/assets/images/Blank-Profile.jpg">
+                <img src="/assets/images/Ar Christian Guerero.png">
             </div>
             <p class="text-xl font-bold">Christian Guerrero</p>
             <p class="text-sm italic">FUAP, AA</p>
@@ -184,6 +174,17 @@
             </div>
             <p class="text-xl font-bold">Ernest Cusi</p>
             <p class="text-md"><b>Digital Media Designer</b></p>
+        </div>
+    </div>
+
+    <div class="text-center lg:p-12 min-[320px]:p-8">
+        <div class="flex flex-col items-center text-muesli">
+            <div style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden;">
+                {{-- <img src="/assets/images/Blank-Profile.jpg"> --}}
+            </div>
+            <p class="text-xl font-bold">Mike Peña</p>
+            <p class="text-sm italic">UAP</p>
+            <p class="text-md"><b>Business Relations Director / Founding Member / Council of Masters</b></p>
         </div>
     </div>
 
