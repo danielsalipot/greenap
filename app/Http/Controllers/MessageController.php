@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Message;
 use App\Http\Requests\StoreMessageRequest;
 use App\Http\Requests\UpdateMessageRequest;
+use App\Jobs\SendMessageReplyJob;
+use Illuminate\Database\Eloquent\Casts\Json;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class MessageController extends Controller
@@ -99,5 +102,14 @@ class MessageController extends Controller
             DB::rollback();
             throw $th;
         }
+    }
+
+    public function reply(Request $request)
+    {
+        $message = Message::find($request->message_id);
+
+        // dispatch(new SendMessageReplyJob($message, 'testemail@gmail.com', $request->subject, $request->reply));
+        dispatch(new SendMessageReplyJob($message, $request->recepient, $request->subject, $request->reply));
+        return redirect()->back();
     }
 }

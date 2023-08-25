@@ -49,11 +49,16 @@ class SocialController extends Controller
                 Auth::login($createUser);
             }
 
-            FacebookData::first()->update([
-                'page_id' => $pageAccessTokenData['id'],
-                'token' => $pageAccessTokenData['access_token'],
-                'posts' => Json::encode($posts),
-            ]);
+            FacebookData::updateOrCreate(
+                [
+                    'page_id' => $pageAccessTokenData['id']
+                ],
+                [
+                    'page_id' => $pageAccessTokenData['id'],
+                    'token' => $pageAccessTokenData['access_token'],
+                    'posts' => Json::encode($posts),
+                ]
+            );
 
             return redirect('/admin/dashboard');
         } catch (Exception $exception) {
@@ -67,13 +72,18 @@ class SocialController extends Controller
         $data = FacebookData::first();
 
         // use page access token to get post from account
-        $postsResponse = $client->request('GET', "https://graph.facebook.com/{$data->page_id}/posts?fields=id,full_picture,message,created_time&access_token={$data->token}");
-        $postsData = json_decode($postsResponse->getBody(), true);
-        $posts = $postsData['data']; // Array of posts
+        try {
+            $postsResponse = $client->request('GET', "https://graph.facebook.com/{$data->page_id}/posts?fields=id,full_picture,message,created_time&access_token={$data->token}asdas");
+            $postsData = json_decode($postsResponse->getBody(), true);
 
-        FacebookData::first()->update([
-            'posts' => Json::encode($posts),
-        ]);
+            $posts = $postsData['data']; // Array of posts
+
+            FacebookData::first()->update([
+                'posts' => Json::encode($posts),
+            ]);
+        } catch (\Throwable $th) {
+            Auth::logout();
+        }
 
         return redirect()->back();
     }

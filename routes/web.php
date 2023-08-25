@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\InquiriesController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SocialController;
@@ -38,7 +39,9 @@ Route::prefix('admin')->group(function () {
         Route::resource('post', PostController::class);
         Route::get('posted', [PostController::class, 'posted']);
         Route::resource('sponsor', SponsorController::class);
-        Route::resource('message', MessageController::class);
+
+        Route::resource('messages', MessageController::class);
+        Route::post('messages/reply', [MessageController::class, 'reply']);
 
         Route::get('/dashboard', [AdminController::class, 'dashboard']);
         Route::get('facebook/refresh', [SocialController::class, 'refreshData']);
