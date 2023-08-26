@@ -12,6 +12,5 @@
             @endforeach
         @else
             no data
-    @endif
-    
+        @endif
 @endsection

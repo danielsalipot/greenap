@@ -26,11 +26,14 @@
 
          <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
             <div class="h-full px-3 py-4 overflow-y-auto bg-sisal dark:bg-gray-800">
-                <p href="#" class="flex items-center p-2 text-gray-900">
+                <p href="" class="flex items-center p-2 text-gray-900">
                     <span class="m-auto text-2xl font-extrabold">GreenAP Admin</span>
-                 </p>
+                </p>
                 <ul class="space-y-2 font-medium my-40">
-                  <li>
+                <li>
+                    <a href="/admin/dashboard" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"><span class="flex-1 ml-3">Dashboard</span></a>
+                </li>
+                <li>
                     <button type="button" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="cms-drop" data-collapse-toggle="cms-drop">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path fill="currentColor" d="M9.338 12.276a1.614 1.614 0 1 0 0-3.228 1.614 1.614 0 0 0 0 3.228Z"/>
