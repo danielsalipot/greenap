@@ -20,11 +20,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        // placeholder row
-        FacebookData::create([
-            'token' => '',
-        ]);
-
         $this->call(PostSeeder::class);
         $this->call(SponsorSeeder::class);
         $this->call(MessageSeeder::class);

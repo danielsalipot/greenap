@@ -6,6 +6,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\SponsorController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,6 +48,11 @@ Route::prefix('admin')->group(function () {
     });
     Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
     Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
+
+    Route::get('/logout', function () {
+        Auth::logout();
+        return redirect('/login');
+    });
 });
 
 Route::resource('message', MessageController::class);
