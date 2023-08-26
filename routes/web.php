@@ -40,8 +40,8 @@ Route::prefix('admin')->group(function () {
         Route::get('posted', [PostController::class, 'posted']);
         Route::resource('sponsor', SponsorController::class);
 
-        Route::resource('messages', MessageController::class);
-        Route::post('messages/reply', [MessageController::class, 'reply']);
+        Route::resource('message', MessageController::class);
+        Route::post('message/reply', [MessageController::class, 'reply']);
 
         Route::get('/dashboard', [AdminController::class, 'dashboard']);
         Route::get('facebook/refresh', [SocialController::class, 'refreshData']);

@@ -17,10 +17,12 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::all();
+        $messages = Message::orderBy('created_at','desc')->get();
         return view('admin.message.index', [
             'messages' => $messages
         ]);
+
+        
     }
 
     /**
@@ -53,9 +55,10 @@ class MessageController extends Controller
      * Display the specified resource.
      */
     public function show(Message $message)
-    {
+    {   
+        
         return view('admin.message.show', [
-            'message' => $message
+            'message' => $message,
         ]);
     }
 

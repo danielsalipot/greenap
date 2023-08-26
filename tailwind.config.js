@@ -20,10 +20,12 @@ module.exports = {
                 'sisal-darker': '#a7a181',
                 'black-white': '#E3E1D5',
                 'caper': '#AABA82',
+                'facebook': '#1877F2',
             },
             dropShadow:{
                 'caper': '6px 6px 0 rgb(170, 186, 130)',
                 'caper-thin': '3px 2px 0 rgb(170, 186, 130)',
+                'muesli': '6px 6px 0 rgb(151, 136, 83)',
             },
             keyframes:{
                 'fade-in-right': {
