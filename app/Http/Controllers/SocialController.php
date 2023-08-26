@@ -36,6 +36,17 @@ class SocialController extends Controller
             $postsData = json_decode($postsResponse->getBody(), true);
             $posts = $postsData['data']; // Array of posts
 
+            FacebookData::updateOrCreate(
+                [
+                    'page_id' => $pageAccessTokenData['id']
+                ],
+                [
+                    'page_id' => $pageAccessTokenData['id'],
+                    'token' => $pageAccessTokenData['access_token'],
+                    'posts' => Json::encode($posts),
+                ]
+            );
+
             if ($isUser) {
                 Auth::login($isUser);
             } else {
@@ -48,17 +59,6 @@ class SocialController extends Controller
 
                 Auth::login($createUser);
             }
-
-            FacebookData::updateOrCreate(
-                [
-                    'page_id' => $pageAccessTokenData['id']
-                ],
-                [
-                    'page_id' => $pageAccessTokenData['id'],
-                    'token' => $pageAccessTokenData['access_token'],
-                    'posts' => Json::encode($posts),
-                ]
-            );
 
             return redirect('/admin/dashboard');
         } catch (Exception $exception) {
