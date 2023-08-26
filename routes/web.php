@@ -40,16 +40,16 @@ Route::prefix('admin')->group(function () {
         Route::get('posted', [PostController::class, 'posted']);
         Route::resource('sponsor', SponsorController::class);
 
-        Route::resource('message', MessageController::class);
         Route::post('message/reply', [MessageController::class, 'reply']);
 
         Route::get('/dashboard', [AdminController::class, 'dashboard']);
         Route::get('facebook/refresh', [SocialController::class, 'refreshData']);
     });
-
     Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
     Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
 });
+
+Route::resource('message', MessageController::class);
 
 Route::get('/login', function () {
     return view('admin.login');

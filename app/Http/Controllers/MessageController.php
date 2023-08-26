@@ -17,12 +17,10 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::orderBy('created_at','desc')->get();
+        $messages = Message::orderBy('created_at', 'desc')->get();
         return view('admin.message.index', [
             'messages' => $messages
         ]);
-
-        
     }
 
     /**
@@ -55,8 +53,8 @@ class MessageController extends Controller
      * Display the specified resource.
      */
     public function show(Message $message)
-    {   
-        
+    {
+
         return view('admin.message.show', [
             'message' => $message,
         ]);
@@ -83,7 +81,7 @@ class MessageController extends Controller
             $message->update($request->only('sender_name', 'sender_email', 'subject', 'message'));
             DB::commit();
 
-            return redirect('/admin/message');
+            return redirect('/message');
         } catch (\Throwable $th) {
             DB::rollback();
             throw $th;
@@ -100,7 +98,7 @@ class MessageController extends Controller
             $message->delete();
             DB::commit();
 
-            return redirect('/admin/message');
+            return redirect('/message');
         } catch (\Throwable $th) {
             DB::rollback();
             throw $th;

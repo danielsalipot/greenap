@@ -10,7 +10,7 @@
                         <img src="/assets/images/ga-team-3.jpg" class="rounded-[20px]">
                     </div>
 
-                    <form action="/admin/message" method="POST">
+                    <form action="/message" method="POST">
                         @csrf
                         <div class="grid grid-cols-2 gap-x-8">
                             <div class="  py-8 ">
@@ -48,8 +48,8 @@
                             <label for="message" class="font-bold text-muesli text-xl">Message:</label>
                             <textarea id="message" name="message" class="w-full bg-transparent mt-8 " rows="5"></textarea>
                         </div>
-                        
-                            
+
+
                         <div class="">
                             <button type="submit" class="mt-3 w-full bg-muesli rounded-none px-4 py-2 text-white font-bold hover:drop-shadow-caper">Send Message</button>
                         </div>
