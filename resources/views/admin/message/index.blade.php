@@ -9,12 +9,14 @@
             <a href="./message/{{ $message->id }}">
                 <article class="p-4 mx-4 text-base  hover:drop-shadow-caper bg-white rounded-lg dark:bg-gray-900 border-muesli border-2 ">
                     <div class="flex items-center mb-3">
-                        <p class="inline-flex items-center mr-3 text-sm text-muesli font-bold"><img
+                        <p class="inline-flex items-center text-sm text-muesli font-bold">
+                            <img
                                 class="mr-2 w-6 h-6 rounded-full"
                                 src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                                alt="{{$message->sender_name}}">{{$message->sender_name}}</p>
-                                <div class=" border-r-2 border-muesli"></div>
-                        
+                                alt="{{$message->sender_name}}">
+                            {{$message->sender_name}}
+                        </p>
+                        <span class="ms-1 text-xs text-caper ">{{$message->sender_email}} </span>
                     </div>
                     <div class="m-4">
                         <p class="text-muesli font-bold truncate">{{$message->subject}}</p>
@@ -23,15 +25,6 @@
                             title="{{$message->created_at}}">On
                             {{\Carbon\Carbon::create($message->created_at)->toDayDateTimeString()}}</time>
                         </p>
-                        {{-- <div class=" border-b-2 border-muesli my-3"></div>
-                        <div class="flex items-center mt-4 space-x-4">
-                            <button type="button"
-                                onclick="location.href='./message/{{ $message->id }}'"
-                                class="flex items-center font-bold text-sm text-muesli hover:text-caper">
-                                <i class="fa-regular fa-comment-dots me-2"></i>
-                                Reply
-                            </button>
-                        </div> --}}
                     </div>
                 </article>
             </a>

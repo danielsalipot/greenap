@@ -1,20 +1,23 @@
 @extends('layouts.admin')
 
 @section('content')
-    <article class="p-4 mx-4 text-base drop-shadow-caper bg-white rounded-lg dark:bg-gray-900 border-muesli border-2 ">
+    <article class="p-4 mx-4 text-base drop-shadow-caper w-1/2 bg-white rounded-lg dark:bg-gray-900 border-muesli border-2 ">
         <div class="flex items-center mb-3">
             <p class="inline-flex items-center mr-3 text-sm text-muesli font-bold"><img
                     class="mr-2 w-6 h-6 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
                     alt="{{$message->sender_name}}">{{$message->sender_name}}</p>
-                    <div class=" border-r-2 border-muesli"></div>
-            <p class="text-xs text-sisal-darker"><time
-                title="{{$message->created_at}}">{{\Carbon\Carbon::create($message->created_at)->toDayDateTimeString()}}</time></p>
+                    <span class="ms-1 text-xs text-caper ">{{$message->sender_email}} </span>
+
+            
         </div>
+        
         <div class="m-4">
             <div class="mb-8">
-                <p class="text-muesli font-bold">{{$message->subject}}</p>
-            <p class="text-muesli text-sm my-4">{{$message->message}}</p>
+                <p class="text-muesli font-bold mb-2">{{$message->subject}}</p>
+                <p class="text-xs text-sisal-darker italic"><time
+                    title="{{$message->created_at}}">on {{\Carbon\Carbon::create($message->created_at)->toDayDateTimeString()}}</time></p>
+                <p class="text-muesli text-base my-4">{{$message->message}}</p>
 
             </div>
             <div class="border-b-2 border-dashed border-muesli mb-12"></div>

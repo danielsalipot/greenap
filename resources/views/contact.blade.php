@@ -16,17 +16,17 @@
                             <div class="  py-8 ">
                                 <div class="py-2">
                                     <label for="fullname" class="font-bold text-muesli text-xl">Full Name:</label>
-                                    <input type="text" id="fullname" name="sender_name" class="w-full bg-transparent border-none">
+                                    <input type="text" id="fullname" name="sender_name" class="focus:ring-0 w-full bg-transparent border-none">
                                     <hr class="w-full border-none bg-muesli h-0.5 mt-1">
                                 </div>
                                 <div class="py-2">
                                     <label for="email" class="font-bold text-muesli text-xl">Email Address:</label>
-                                    <input type="email" id="email" name="sender_email" class="w-full bg-transparent border-none">
+                                    <input type="email" id="email" name="sender_email" class="focus:ring-0 w-full bg-transparent border-none">
                                     <hr class="w-full border-none bg-muesli h-0.5 mt-1">
                                 </div>
                                 <div class="py-2">
                                     <label for="subject" class="font-bold text-muesli text-xl">Subject:</label>
-                                    <input type="text" id="subject" name="subject" class="w-full bg-transparent border-none">
+                                    <input type="text" id="subject" name="subject" class=" focus:ring-0 w-full bg-transparent border-none">
                                     <hr class="w-full border-none bg-muesli h-0.5 mt-1">
                                 </div>
                             </div>
@@ -35,18 +35,18 @@
                                     <label for="contact" class="font-bold text-muesli text-xl">Contact:</label>
                                     <div class="block gap-y-3">
                                         <p id="contact" class="text-muesli"><i class="fa-solid fa-envelope mr-2"></i> sustainability@greenap-ph.com</p>
-                                        <a href="www.greenap-ph.com" id="contact" class="text-muesli "><i class="fa-solid fa-globe mr-2"></i> www.greenap-ph.com</a>
+                                        <a href="greenap-ph.com" id="contact" class="text-muesli "><i class="fa-solid fa-globe mr-2"></i> www.greenap-ph.com</a>
                                     </div>
                                 </div>
                                 <div class="py-2">
                                     <label for="address" class="font-bold text-muesli text-xl">Based In:</label>
-                                    <p id="address" class="text-muesli">15 Maayusin St., UP Village Quezon City, Philippines</p>
+                                    <p id="address" class="text-muesli"><i class="fa-solid fa-location-dot me-2 "></i>15 Maayusin St., UP Village Quezon City, Philippines</p>
                                 </div>
                             </div>
                         </div>
                         <div class="">
                             <label for="message" class="font-bold text-muesli text-xl">Message:</label>
-                            <textarea id="message" name="message" class="w-full bg-transparent mt-8 " rows="5"></textarea>
+                            <textarea id="message" name="message" class="w-full bg-transparent mt-8 border-coriander border-2 focus:ring-0 focus:border-muesli" rows="5"></textarea>
                         </div>
 
 

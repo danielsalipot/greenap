@@ -109,8 +109,9 @@ class MessageController extends Controller
     {
         $message = Message::find($request->message_id);
 
-        // dispatch(new SendMessageReplyJob($message, 'testemail@gmail.com', $request->subject, $request->reply));
-        dispatch(new SendMessageReplyJob($message, $request->recepient, $request->subject, $request->reply));
+        dispatch(new SendMessageReplyJob($message, 'leandakenneth@gmail.com', $request->subject, $request->reply));
+        // dispatch(new SendMessageReplyJob($message, $request->recepient, $request->subject, $request->reply));
         return redirect()->back();
+
     }
 }
