@@ -32,7 +32,7 @@ class SocialController extends Controller
             $pageAccessTokenData = json_decode($pageAccessTokenResponse->getBody(), true)['accounts']['data'][0];
 
             // use page access token to get post from account
-            $postsResponse = $client->request('GET', "https://graph.facebook.com/{$pageAccessTokenData['id']}/posts?fields=id,full_picture,message,created_time&access_token={$pageAccessTokenData['access_token']}");
+            $postsResponse = $client->request('GET', "https://graph.facebook.com/{$pageAccessTokenData['id']}/posts?fields=id,full_picture,message,created_time,attachments&access_token={$pageAccessTokenData['access_token']}");
             $postsData = json_decode($postsResponse->getBody(), true);
             $posts = $postsData['data']; // Array of posts
 
@@ -72,7 +72,7 @@ class SocialController extends Controller
         $data = FacebookData::first();
 
         // use page access token to get post from account
-        $postsResponse = $client->request('GET', "https://graph.facebook.com/{$data->page_id}/posts?fields=id,full_picture,message,created_time&access_token={$data->token}");
+        $postsResponse = $client->request('GET', "https://graph.facebook.com/{$data->page_id}/posts?fields=id,full_picture,message,created_time,attachments&access_token={$data->token}");
         $postsData = json_decode($postsResponse->getBody(), true);
 
         $posts = $postsData['data']; // Array of posts

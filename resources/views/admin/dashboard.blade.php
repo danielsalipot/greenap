@@ -1,13 +1,11 @@
 @extends('layouts.admin')
 
 @section('content')
-
     <div class="flex justify-between mb-4">
         <h1 class="font-extrabold text-3xl text-muesli">Dashboard</h1>
         <button onclick="location.href='/admin/facebook/refresh'" class="mb-2 rounded-full w-12 h-12 bg-caper p-3 text-white"><i class="fa-solid fa-rotate-right text-2xl "> </i></button>
     </div>
     <div class="container swiper lg:max-w-full min-[320px]:max-w-[400px] md:max-w-[800px]">
-        
         <div class="slide-fb-container ">
             <div class="card-wrapper swiper-wrapper">
                 @if($posts !== null)
@@ -16,13 +14,12 @@
                         <a href="https://www.facebook.com/{{$post['id']}}" class="">
                             <div class="rounded-[20px] border-2 hover:border-dashed hover:border-caper border-muesli p-4 ">
                                 <div class="flex justify-between">
-                                    
                                     <p class="inline-flex items-center text-sm text-muesli font-bold mb-2">
                                         <img
                                             class="mr-2 w-8 h-8 rounded-full"
                                             src="{{asset('assets/images/greenap-logo-2.png')}}"
                                             alt="">
-                                        Green AP 
+                                        Green AP
                                     </p>
                                     <h1 class="text-3xl font-extrabold text-facebook"><i class="fa-brands fa-facebook me-2"></i></h1>
                                 </div>
@@ -45,7 +42,6 @@
         @else
             no data
         @endif
-
 @endsection
 <style>
     .container {
