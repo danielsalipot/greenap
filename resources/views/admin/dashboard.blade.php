@@ -24,7 +24,7 @@
                                     <h1 class="text-3xl font-extrabold text-facebook"><i class="fa-brands fa-facebook me-2"></i></h1>
                                 </div>
                                 <div class="grid gap-y-4">
-                                    <p class="text-muesli text-base">{{$post['message']}}</p>
+                                    <p class="text-muesli text-base">{{ isset($post['message']) ? $post['message'] : ""}}</p>
                                     @if (isset($post['full_picture']))
                                         <img src="{{ $post['full_picture'] }}" onclick="location.href='https://www.facebook.com/{{$post['id']}}'" alt="Post Image" class="h-auto w-96 rounded-[10px] hover:border-2 hover:border-dashed hover:border-caper">
                                     @endif
