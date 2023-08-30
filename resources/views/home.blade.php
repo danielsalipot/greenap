@@ -12,7 +12,7 @@
 
     <div class="flex content-stretch min-[320px]:m-8 md:my-16 text-center">
         <h1 class="lg:text-6xl min-[320px]:text-4xl mr-8 font-extrabold text-muesli">Who We Are</h1>
-        <div class="border flex-grow my-auto border-muesli border"></div>
+        <div class="border flex-grow my-auto border-muesli"></div>
     </div>
     <div class="grid p-4 min-[320px]:grid-cols-1 lg:grid-cols-2 lg:gap-8 items-center justify-items-center">
         <p class="font-normal font-open-sans mt-3 text-muesli lg:text-lg min-[320px]:m-8 min-[390px]:mx-4 ">
@@ -28,7 +28,7 @@
     </div>
 
     <div class="flex content-stretch min-[320px]:m-8 md:my-8 text-center">
-        <div class="border flex-grow my-auto border-muesli border"></div>
+        <div class="border flex-grow my-auto border-muesli"></div>
         <h1 class="lg:text-6xl min-[320px]:text-4xl ml-8 font-extrabold text-muesli">Objective</h1>
     </div>
     <div class="grid grid-rows-2">
@@ -61,7 +61,7 @@
 
         <div class="flex content-stretch min-[320px]:m-16 md:my-16 text-right">
             <h1 class="lg:text-4xl min-[320px]:text-4xl mr-8 font-extrabold text-muesli">Corporate Members</h1>
-            <div class="border flex-grow my-auto border-muesli border min-[320px]:invisible lg:visible"></div>
+            <div class="border flex-grow my-auto border-muesli min-[320px]:invisible lg:visible"></div>
         </div>
         <div class="py-12 sm:py-8">
             <div class="max-w-7xl px-6 lg:px-8">
@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="flex content-stretch min-[320px]:m-16 md:my-16 text-right">
-            <div class="border flex-grow my-auto border-muesli border min-[320px]:invisible lg:visible"></div>
+            <div class="border flex-grow my-auto border-muesli min-[320px]:invisible lg:visible"></div>
             <h1 class="lg:text-4xl min-[320px]:text-4xl ml-8 font-extrabold text-muesli">Industry Partners</h1>
         </div>
         <div class="bg-transparent py-12 sm:py-8">

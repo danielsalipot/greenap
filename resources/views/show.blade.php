@@ -5,7 +5,7 @@
 
 <div class="mx-8">
     <div class="flex content-stretch min-[320px]:m-8 md:my-16">
-        <div class="border flex-grow my-auto border-muesli border"></div>
+        <div class="border flex-grow my-auto border-muesli"></div>
             <div class="ml-8 text-right ">
                 @if($post->featured == 1)
                     <span class="bg-caper w-auto text-white text-xs font-medium px-2.5 py-0.5 rounded-[20px]">Featured</span>

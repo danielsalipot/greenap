@@ -16,7 +16,7 @@ class MessageTest extends TestCase
     {
         $message = Message::factory()->create();
 
-        $response = $this->get('/admin/message');
+        $response = $this->get('/message');
         $response->assertStatus(200);
 
         $response->assertViewHas('messages', function ($collection) use ($message) {
@@ -27,7 +27,7 @@ class MessageTest extends TestCase
     public function test_message_show_route_is_successful_and_data_is_passed_correctly(): void
     {
         $message = Message::factory()->create();
-        $response = $this->get("/admin/message/$message->id");
+        $response = $this->get("/message/$message->id");
 
         $response->assertStatus(200);
         $response->assertViewHas('message', function ($collection) use ($message) {
@@ -38,7 +38,7 @@ class MessageTest extends TestCase
     public function test_message_edit_route_is_successful_and_data_is_passed_correctly(): void
     {
         $message = Message::factory()->create();
-        $response = $this->get("/admin/message/$message->id/edit");
+        $response = $this->get("/message/$message->id/edit");
 
         $response->assertStatus(200);
         $response->assertViewHas('message', function ($collection) use ($message) {
@@ -57,7 +57,7 @@ class MessageTest extends TestCase
             'message' => fake()->paragraphs(3, true),
         ];
 
-        $response = $this->post('/admin/message', $message);
+        $response = $this->post('/message', $message);
 
         $response->assertRedirect();
         $this->assertDatabaseHas('messages', $message);
@@ -70,7 +70,7 @@ class MessageTest extends TestCase
             'message' => fake()->paragraphs(3, true),
         ];
 
-        $response = $this->post('/admin/message', $message);
+        $response = $this->post('/message', $message);
 
         $response->assertRedirect();
         $this->assertDatabaseMissing('messages', $message);
@@ -86,7 +86,7 @@ class MessageTest extends TestCase
             'message' => fake()->paragraphs(3, true),
         ];
 
-        $response = $this->put("/admin/message/$message->id", $update_data);
+        $response = $this->put("/message/$message->id", $update_data);
         $response->assertRedirect();
 
         //check if data has been updated
@@ -97,7 +97,7 @@ class MessageTest extends TestCase
     public function test_message_delete_is_successful(): void
     {
         $message = Message::factory()->create();
-        $response = $this->delete("/admin/message/$message->id");
+        $response = $this->delete("/message/$message->id");
 
         $response->assertRedirect();
         //check if data has been deleted from database

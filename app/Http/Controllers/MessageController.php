@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Message;
 use App\Http\Requests\StoreMessageRequest;
 use App\Http\Requests\UpdateMessageRequest;
+use App\Jobs\SendMessageReplyJob;
+use Illuminate\Database\Eloquent\Casts\Json;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class MessageController extends Controller
@@ -14,7 +17,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::all();
+        $messages = Message::orderBy('created_at', 'desc')->get();
         return view('admin.message.index', [
             'messages' => $messages
         ]);
@@ -51,8 +54,9 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
+
         return view('admin.message.show', [
-            'message' => $message
+            'message' => $message,
         ]);
     }
 
@@ -77,7 +81,7 @@ class MessageController extends Controller
             $message->update($request->only('sender_name', 'sender_email', 'subject', 'message'));
             DB::commit();
 
-            return redirect('/admin/message');
+            return redirect('/message');
         } catch (\Throwable $th) {
             DB::rollback();
             throw $th;
@@ -94,10 +98,20 @@ class MessageController extends Controller
             $message->delete();
             DB::commit();
 
-            return redirect('/admin/message');
+            return redirect('/message');
         } catch (\Throwable $th) {
             DB::rollback();
             throw $th;
         }
+    }
+
+    public function reply(Request $request)
+    {
+        $message = Message::find($request->message_id);
+
+        dispatch(new SendMessageReplyJob($message, 'leandakenneth@gmail.com', $request->subject, $request->reply));
+        // dispatch(new SendMessageReplyJob($message, $request->recepient, $request->subject, $request->reply));
+        return redirect()->back();
+
     }
 }

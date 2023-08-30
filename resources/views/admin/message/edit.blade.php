@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<form action="/admin/message/{{ $message->id }}" method="POST">
+<form action="/message/{{ $message->id }}" method="POST">
     @csrf
     @method('PUT')
     <div class="border-2 border-black max-w-full mx-4 px-8 pt-12 pb-8 h-[80%] overflow-y-auto">
@@ -46,7 +46,7 @@
     </div>
 </form>
 
-<form action="/admin/message/{{ $message->id }}" method="POST">
+<form action="/message/{{ $message->id }}" method="POST">
 @csrf
 @method('DELETE')
 <button type="submit">Delete</button>

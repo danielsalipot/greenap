@@ -17,13 +17,15 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    public function posts(){
+    public function posts()
+    {
         return $this->hasMany(Post::class);
     }
     protected $fillable = [
         'name',
         'email',
         'password',
+        'fb_id'
     ];
 
     /**
