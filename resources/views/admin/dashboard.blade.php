@@ -56,7 +56,7 @@
                                     <img
                                         class="mr-2 w-8 h-8 rounded-full border border-muesli"
                                         src="{{asset('assets/images/greenap-logo-2.png')}}"
-                                        alt="">
+                                        alt="">n
                                     Green AP
                                 </p>
                                 <h1 class="text-3xl font-extrabold "><i class="text-transparent bg-clip-text bg-gradient-to-bl from-insta-ylw via-insta-pnk to-insta-vlt fa-brands fa-instagram me-2"></i></h1>
