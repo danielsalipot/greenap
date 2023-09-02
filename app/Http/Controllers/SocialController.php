@@ -83,4 +83,13 @@ class SocialController extends Controller
 
         return redirect()->back();
     }
+    public function showPage(){
+        $getPost = FacebookData::latest()
+                   ->first();
+
+        $decode = json_decode($getPost->posts);
+        // dd($decode);
+
+        return view('social', ['data' => $decode]);
+    }
 }
