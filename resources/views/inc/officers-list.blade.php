@@ -180,6 +180,15 @@
     <div class="text-center lg:p-12 min-[320px]:p-8">
         <div class="flex flex-col items-center text-muesli">
             <div style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden;">
+                <img src="/assets/images/viz.jpeg">
+            </div>
+            <p class="text-xl font-bold">AR. Rosita Laura Isabel O. Vizmonte</p>
+            <p class="text-md"><b>GreenAP Core Group Member</b></p>
+        </div>
+    </div>
+    <div class="text-center lg:p-12 min-[320px]:p-8">
+        <div class="flex flex-col items-center text-muesli">
+            <div style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden;">
                 {{-- <img src="/assets/images/Blank-Profile.jpg"> --}}
             </div>
             <p class="text-xl font-bold">Mike Peña</p>

@@ -1,10 +1,10 @@
-<nav class="w-full border-gray-200 dark:bg-gray-900 dark:border-gray-700 fixed ">
+<nav class="w-full border-gray-200 dark:bg-gray-900 dark:border-gray-700">
     <div class="max-w-screen-xl px-8 flex flex-wrap items-center justify-between mt-10 mb-10 mx-auto">
         <div class="lg:flex md:flex sm:block lg:items-center md:items-center absolute top-12 left-12">
             <a href="/home" class="flex items-center ">
                 <img src="{{asset('assets/images/greenap-logo-3d.png')}}" class="lg:h-20 md:h-16 min-[320px]:h-16  hover:drop-shadow-lg " alt="GreenAP Logo" />
             </a>
-            <p class="lg:text-xs min-[320px]:text-[10px] ml-2 text-muesli font-bold">The Philippines’ <br>oldest multidisciplinary <br> Green Architecture organization.</p>
+            <p class="lg:text-xs min-[320px]:text-[10px] ml-2 text-muesli font-bold">The Philippines’ <br>longest-running <br> Green Architecture organization.</p>
         </div>
 
         <div class="absolute top-12 right-12 grid justify-items-end">
@@ -28,7 +28,7 @@
                         <a href="/posts" class="block underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded md:border-0 hover:text-caper md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Posts</a>
                     </li>
                     <li>
-                        <a href="/about" class="block underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded md:border-0 hover:text-caper md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                        <a href="/about" class="block underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded md:border-0 hover:text-caper md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Who we Are</a>
                     </li>
                     <li>
                         <a href="/contact" class="block underline-offset-8 decoration-2 py-2 pl-3 pr-4 rounded md:border-0 hover:text-caper md:p-0 dark:text-white md:dark:hover:text-caper dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>

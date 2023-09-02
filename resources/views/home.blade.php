@@ -3,7 +3,7 @@
     <div class="bg flex items-center justify-center">
         <div class="absolute bottom-12 right-12 grid justify-items-end">
             <img src="{{asset('assets/images/greenap-logo-3d.png')}}" class="animate-fade-in-right lg:h-36 md:h-20 min-[320px]:h-20" alt="GreenAP Logo" />
-            <h1 class="text-muesli text-right text-xl font-bold animate-fade-in-right min-[320px]:ml-4 min-[320px]:mt-4">The Philippines’ oldest multidisciplinary Green Architecture organization.</h1>
+            <h1 class="text-muesli text-right text-xl font-bold animate-fade-in-right min-[320px]:ml-4 min-[320px]:mt-4">The Philippines’ longest-running multidisciplinary Green Architecture organization.</h1>
         </div>
     </div>
     @include('inc.searchbar')
