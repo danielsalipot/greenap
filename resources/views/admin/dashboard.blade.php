@@ -6,8 +6,8 @@
         <button onclick="location.href='/admin/facebook/refresh'" class="mb-2 rounded-full w-12 h-12 bg-caper p-3 text-white"><i class="fa-solid fa-rotate-right text-2xl "> </i></button>
     </div>
 
-    <div class="grid lg:grid-cols-2 sm:grid-cols-1 items-center">
-        <aside class="h-screen overflow-auto">
+    <div class="grid lg:grid-cols-2 sm:grid-cols-1 items-center gap-8">
+        <aside class="h-screen overflow-y-scroll no-scrollbar">
             <div class="grid lg:grid-cols-1 sm:grid-cols-1 gap-4">
                 @if($posts !== null)
                     @foreach ($posts as $post)
@@ -45,7 +45,7 @@
             </div>
         </aside>
 
-        <aside class="h-screen overflow-auto">
+        <aside class="h-screen overflow-y-scroll no-scrollbar">
             <div class="grid lg:grid-cols-1 sm:grid-cols-1 gap-4">
                 @if($posts !== null)
                     @foreach ($posts as $post)
@@ -82,6 +82,7 @@
                 @endif
             </div>
         </aside>
+    </div>
 @endsection
 <style>
     .container {
